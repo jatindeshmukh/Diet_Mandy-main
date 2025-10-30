@@ -1,0 +1,118 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Diet Mandy | Your Health Partner</title>
+
+    <link rel="stylesheet" href="{% static 'practice.css' %}">
+    <script defer src="{% static 'practice.js' %}"></script>
+</head>
+
+<body>
+
+<!-- ✅ Navbar -->
+<nav>
+    <div class="logo">🥗 Diet Mandy</div>
+    <ul>
+        <li><a href="#home" class="active">Home</a></li>
+        <li><a href="#why">Why We’re Different</a></li>
+        <li><a href="#diets">Diet Topics</a></li>
+        <li><a href="#success">Success Stories</a></li>
+        
+        <!-- ✅ Your Django Login / Signup -->
+        <li><a href="{% url 'login' %}">Login</a></li>
+        <li><a href="{% url 'signup' %}" class="cta">Sign Up</a></li>
+    </ul>
+</nav>
+
+<!-- ✅ Hero Section -->
+<section id="home" class="hero">
+    <div>
+        <h2>Transform Your Health</h2>
+        <p>Personalized diet guidance for real results.</p>
+        <a href="{% url 'signup' %}" class="cta">Start Now</a>
+    </div>
+
+    <img src="https://images.unsplash.com/photo-1490645935967-10de6ba17061?auto=format&fit=crop&w=800&q=80">
+</section>
+
+<!-- ✅ Why We’re Different -->
+<section id="why-different" class="why-section">
+    <h2>Why We’re Different</h2>
+
+    <div class="why-container">
+
+        <div class="why-card">
+            <div class="why-icon">🥗</div>
+            <h3> Personalized Plans</h3>
+            <p>Tailored nutrition plans built around your body, lifestyle, and daily routine — so you enjoy balanced meals that fit your taste, schedule, and health goals.</p>
+        </div>
+
+        <div class="why-card">
+            <div class="why-icon">📊</div>
+            <h3>Track Progress & Analytics</h3>
+            <p>Smart dashboard to monitor calories, weight & habits.</p>
+        </div>
+
+        <div class="why-card">
+            <div class="why-icon">🥗</div>
+            <h3>Real Food. No Starvation.</h3>
+            <p>Eat Real. Stay Full. No starving, no boring food — enjoy everyday meals with balanced nutrition while achieving your fitness goals sustainably..</p>
+        </div>
+
+        <div class="why-card">
+            <div class="why-icon">🥗</div>
+            <h3>Smart Progress Tracking.</h3>
+            <p>With Smart Progress Tracking, you can monitor your daily calories, macro balance (carbs, proteins & fats), water intake, weight changes, activity levels.</p>
+        </div>
+    </div>
+</section>
+
+<!-- ✅ Diet Topics -->
+<section id="diets">
+    <h2>Diet Topics</h2>
+    <div class="card-container">
+        <div class="card">Weight Loss Diet</div>
+        <div class="card">Muscle Gain Diet</div>
+        <div class="card">Keto Diet</div>
+        <div class="card">Diabetic-Friendly Diet</div>
+    </div>
+</section>
+
+<!-- ✅ Success Stories -->
+<section id="success">
+    <h2>Success Stories</h2>
+    <div class="card-container">
+        <div class="card">🔥 Lost 20kg in 5 Months</div>
+        <div class="card">💪 Muscle Gain Journey</div>
+        <div class="card">🌟 Medical Condition Success</div>
+    </div>
+</section>
+
+
+<!-- ✅ Exciting Call-to-Action Section -->
+<section class="cta-calculator">
+    <h2>Ready to Discover Your Perfect Diet Plan? 🧠🍏</h2>
+    <p>
+        Your body has a story — let our smart nutrition tool reveal it.  
+        Track your BMI, calories & macros and unlock your personalized diet plan!
+    </p>
+
+    <a href="{% url 'calculator' %}" class="cta-button">
+        🚀 Start My Health Analysis
+    </a>
+
+    <p class="mini-note">Takes less than 2 minutes ⏳ — No guesswork, just science!</p>
+</section>
+
+
+
+<!-- ✅ Footer -->
+<footer>
+    © 2025 Diet Mandy — Eat Healthy, Live Better 
+</footer>
+
+</body>
+</html>

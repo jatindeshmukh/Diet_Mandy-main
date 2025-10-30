@@ -1,0 +1,98 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Diet Mandy | Sign Up</title>
+    <link rel="stylesheet" href="{% static 'signup.css' %}">
+    <script defer src="{% static 'signup.js' %}"></script>
+</head>
+
+<body>
+    <div class="outer-container">
+        <div class="signup-card">
+            <h1 class="title">Join <span>Diet Mandy</span></h1>
+            <p class="subtitle">Create your personalized diet profile</p>
+
+            <form id="signupForm">
+                <div class="form-grid">
+                    <div class="input-group">
+                        <label>Full Name</label>
+                        <input type="text" id="fullname" placeholder="Enter your full name" required>
+                    </div>
+
+                    <div class="input-group">
+                        <label>Email Address</label>
+                        <input type="email" id="email" placeholder="Enter your email" required>
+                    </div>
+
+                    <div class="input-group">
+                        <label>Password</label>
+                        <input type="password" id="password" placeholder="Enter password" required>
+                    </div>
+
+                    <div class="input-group">
+                        <label>Confirm Password</label>
+                        <input type="password" id="confirmPassword" placeholder="Confirm password" required>
+                    </div>
+
+                    <div class="input-group">
+                        <label>Age</label>
+                        <input type="number" id="age" placeholder="Enter your age" required>
+                    </div>
+
+                    <div class="input-group">
+                        <label>Gender</label>
+                        <select id="gender" required>
+                        <option value="">Select Gender</option>
+                        <option value="Male">Male</option>
+                        <option value="Female">Female</option>
+                        <option value="Other">Other</option>
+                    </select>
+                    </div>
+
+                    <div class="input-group">
+                        <label>Height</label>
+                        <input type="text" id="height" placeholder="e.g. 170 cm or 5'6''" required>
+                    </div>
+
+                    <div class="input-group">
+                        <label>Primary Goal</label>
+                        <select id="goal" required>
+                <option value="">Select Goal</option>
+                <option value="Weight Loss">Weight Loss</option>
+                <option value="Maintain">Maintain</option>
+                <option value="Gain Muscle">Gain Muscle</option>
+                <option value="Improve Health">Improve Health</option>
+            </select>
+                    </div>
+
+                    <div class="input-group">
+                        <label>Diet Type / Preference</label>
+                        <select id="dietType" required>
+                <option value="">Select Diet Type</option>
+                <option value="Vegetarian">Vegetarian</option>
+                <option value="Vegan">Vegan</option>
+                <option value="Non-Vegetarian">Non-Vegetarian</option>
+                <option value="Eggetarian">Eggetarian</option>
+            </select>
+                    </div>
+
+                    <div class="input-group full-width">
+                        <label>Allergies / Food Restrictions</label>
+                        <textarea id="allergies" placeholder="Describe or type 'None'"></textarea>
+                    </div>
+                </div>
+
+                <button type="submit" class="btn">Sign Up</button>
+                <p class="login-link">Already have an account? <a href="login.html">Login here</a></p>
+            </form>
+        </div>
+    </div>
+
+    
+</body>
+
+</html>
