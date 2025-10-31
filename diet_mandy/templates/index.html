@@ -19,7 +19,7 @@
         <li><a href="#home" class="active">Home</a></li>
         <li><a href="#why">Why We’re Different</a></li>
         <li><a href="#diets">Health Analysis</a></li>
-        <li><a href="#success">Blog </a></li>
+        <li><a href="{% url 'blogs' %}">Blog </a></li>
         
         <!-- ✅ Your Django Login / Signup -->
         <li><a href="{% url 'login' %}">Login</a></li>
@@ -73,13 +73,52 @@
 <!-- ✅ Diet Topics -->
 <section id="diets">
     <h2>Health Analysis</h2>
+
     <div class="card-container">
-        <div class="card">Weight Loss Diet</div>
-        <div class="card">Muscle Gain Diet</div>
-        <div class="card">Keto Diet</div>
-        <div class="card">Diabetic-Friendly Diet</div>
+
+        <!-- Weight Loss Diet -->
+        <div class="card">
+            <img src="{% static 'Images/image_copy_2.png' %}" alt="Weight Loss Diet">
+            <h3>Weight Loss Diet</h3>
+            <p>Low-calorie meals, portion control & high-fiber foods to burn fat naturally.</p>
+            <a href="{% url 'weight_calculator' %}" class="btn">Check Ideal Weight</a>
+        </div>
+
+        <!-- Muscle Gain Diet -->
+        <div class="card">
+            <img src="{% static '' %}" alt="Weight Loss Diet">
+            <h3>Muscle Gain Diet</h3>
+            <p>High protein meals, healthy carbs & strength-support nutrients.</p>
+        </div>
+
+        <!-- Keto Diet -->
+        <div class="card">
+        <img src="{% static '' %}" alt="Weight Loss Diet">
+            <h3>Keto Diet</h3>
+            <p>Low-carb, high-fat meals that turn body fat into energy.</p>
+        </div>
+
+        <!-- Diabetic-Friendly Diet -->
+        <div class="card">
+            <img src="{% static '' %}" alt="Weight Loss Diet">
+            <h3>Diabetic-Friendly Diet</h3>
+            <p>Low sugar & fiber-rich foods to stabilize blood sugar levels.</p>
+        </div>
+
+        <!-- Add more new diet cards below -->
+
+        <div class="card">
+            <img src="{% static '' %}" alt="Weight Loss Diet">
+            <h3>PCOS/PCOD Diet</h3>
+            <p>Balanced carbs, high fiber & anti-inflammatory foods to manage hormones.</p>
+        </div>
+
+    
+
+    
     </div>
 </section>
+
 
 <!-- ✅ Success Stories -->
 <section id="success">

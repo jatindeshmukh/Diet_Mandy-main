@@ -23,3 +23,8 @@ def calculator(request):
     return render(request, 'calculator.html')
 
 
+def blogs(request):       
+    return render(request, 'blogs.html')
+
+def weight_calculator(request):       
+    return render(request, 'weight_calculator.html')

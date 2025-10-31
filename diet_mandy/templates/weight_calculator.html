@@ -1,0 +1,42 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Ideal Weight Calculator</title>
+
+
+    <link rel="stylesheet" href="{% static 'weight_calculator.css' %}">
+    <!--<script  src="{% static 'weight_calculator.js' %}"></script> -->
+</head>
+
+<body>
+<div class="container">
+    <h2>Ideal Weight Calculator</h2>
+
+    <label>Gender</label>
+    <select id="gender">
+        <option value="male">Male</option>
+        <option value="female">Female</option>
+    </select>
+
+    <label>Height (feet)</label>
+    <select id="height">
+        <option value="5.0">5'0"</option>
+        <option value="5.3">5'3"</option>
+        <option value="5.6">5'6"</option>
+        <option value="5.9">5'9"</option>
+    </select>
+
+    <label>Your Weight (kg)</label>
+    <input type="number" id="weight" placeholder="Enter your weight">
+
+    <button id="checkBtn">Check Ideal Range</button>
+
+    <p id="result"></p>
+</div>
+
+<script src="{% static 'js/weight_calculator.js' %}"></script>
+</body>
+</html>

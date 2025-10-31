@@ -1,0 +1,169 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Diet Mandy Blogs</title>
+    <link rel="stylesheet" href="{% static 'blogs.css' %}">
+    <script defer src="{% static 'js/calculate.js' %}"></script>
+
+</head>
+
+<body>
+
+<h1 class="title">Diet Mandy – Healthy Living Blogs</h1>
+
+<div class="blog-container">
+
+    <!-- Blog 1 -->
+    <div class="blog-card">
+        <img src="https://plus.unsplash.com/premium_photo-1663841017187-3ce49bfd5643?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTd8fEhlYWx0aHklMjBJbmRpYW4lMjBCcmVha2Zhc3QlMjBJfGVufDB8fDB8fHww&auto=format&fit=crop&q=60&w=600" class="blog-img">
+        <div class="blog-content">
+            <h2>Healthy Indian Breakfast Ideas for Everyday Fitness</h2>
+            <p>A nutritious breakfast boosts metabolism & energy for the day. Indian breakfast options are wholesome & balanced.</p>
+            <h3>Top Picks</h3>
+            <ul>
+                <li>Oats Upma – fiber rich</li>
+                <li>Moong Dal Chilla – protein pack</li>
+                <li>Vegetable Poha – light & nutritious</li>
+                <li>Idli + Sambar – fermented & gut-friendly</li>
+                <li>Sprouts Bowl – rich in vitamins</li>
+                <li>Besan Chilla – high protein</li>
+            </ul>
+            <button class="read-more-btn" onclick="readMore(1)">Read More</button>
+        </div>
+    </div>
+
+    <!-- Blog 2 -->
+    <div class="blog-card">
+        <img src="https://images.unsplash.com/photo-1592058051424-93c594479fcc?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8OTF8fEhlYWx0aHklMjBJbmRpYW4lMjBCcmVha2Zhc3QlMjBJZGVhc3xlbnwwfHwwfHx8MA%3D%3D&auto=format&fit=crop&q=60&w=600" class="blog-img">
+        <div class="blog-content">
+            <h2>Healthy Indian Breakfast Ideas</h2>
+            <p>Start your day with meals that keep your stomach light & energy high without sugar crashes.</p>
+            <h3>Try These</h3>
+            <ul>
+                <li>Daliya with veggies</li>
+                <li>Paneer sandwich with whole wheat bread</li>
+                <li>Rava upma with nuts</li>
+                <li>Banana peanut smoothie</li>
+                <li>Egg bhurji + roti</li>
+            </ul>
+            <button class="read-more-btn" onclick="readMore(2)">Read More</button>
+        </div>
+    </div>
+
+    <!-- Blog 3 -->
+    <div class="blog-card">
+        <img src="https://images.unsplash.com/photo-1532054241088-402b4150db33?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NTZ8fEJhbGFuY2VkJTIwRGlldCUyMHZzJTIwVHJlbmR5JTIwRGlldHN8ZW58MHx8MHx8fDA%3D&auto=format&fit=crop&q=60&w=600" class="blog-img">
+        <div class="blog-content">
+            <h2>Balanced Diet vs Trendy Diets</h2>
+            <p>Crash diets give quick results but harm your metabolism. A balanced diet fuels your body sustainably.</p>
+            <h3>Balanced Diet Includes</h3>
+            <ul>
+                <li>Protein (Dal, Eggs, Paneer, Chicken)</li>
+                <li>Good carbs (Millets, Rice, Roti)</li>
+                <li>Healthy fats (Ghee, Nuts)</li>
+                <li>Fruits & vegetables</li>
+                <li>Plenty of water</li>
+            </ul>
+            <button class="read-more-btn" onclick="readMore(3)">Read More</button>
+        </div>
+    </div>
+
+    <!-- Blog 4 -->
+    <div class="blog-card">
+        <img src="https://images.unsplash.com/photo-1705234384739-7244bdd49645?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTR8fFZlZ2V0YXJpYW4lMjBQcm90ZWluJTIwU291cmNlc3xlbnwwfHwwfHx8MA%3D%3D&auto=format&fit=crop&q=60&w=600" class="blog-img">
+        <div class="blog-content">
+            <h2>Vegetarian Protein Sources</h2>
+            <p>Vegetarians can easily fulfill protein needs with smart food choices.</p>
+            <h3>Top Protein Foods</h3>
+            <ul>
+                <li>Lentils & dal</li>
+                <li>Chickpeas & beans</li>
+                <li>Paneer & curd</li>
+                <li>Sprouts & soya chunks</li>
+                <li>Peanuts & almonds</li>
+                <li>Quinoa</li>
+            </ul>
+            <button class="read-more-btn" onclick="readMore(4)">Read More</button>
+        </div>
+    </div>
+
+
+    <!-- Blog 5 -->
+    <div class="blog-card">
+        <img src="https://images.unsplash.com/photo-1543353071-10c8ba85a904?auto=format&fit=crop&w=900&q=60" class="blog-img">
+        <div class="blog-content">
+            <h2>Portion Control Guide</h2>
+            <p>Portion control prevents overeating & supports healthy weight loss without strict diets.</p>
+            <h3>Tips</h3>
+            <ul>
+                <li>½ plate veggies, ¼ carbs, ¼ protein</li>
+                <li>Use smaller plates</li>
+                <li>Eat slowly & mindfully</li>
+                <li>Stop at 80% fullness</li>
+            </ul>
+            <button class="read-more-btn" onclick="readMore(5)">Read More</button>
+        </div>
+    </div>
+
+    <!-- Blog 6 -->
+    <div class="blog-card">
+        <img src="https://plus.unsplash.com/premium_photo-1712678280695-7525b7bf50d0?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MjV8fEd1dC1IZWFsdGh5JTIwSW5kaWFuJTIwRm9vZHN8ZW58MHx8MHx8fDA%3D&auto=format&fit=crop&q=60&w=600" class="blog-img">
+        <div class="blog-content">
+            <h2>Gut-Healthy Indian Foods</h2>
+            <p>A healthy gut boosts digestion, immunity & overall well-being. Indian food supports gut health naturally.</p>
+            <h3>Best Foods</h3>
+            <ul>
+                <li>Curd & Buttermilk</li>
+                <li>Banana</li>
+                <li>Moong Dal Khichdi</li>
+                <li>Fermented foods & pickles</li>
+                <li>Jeera / Ajwain water</li>
+            </ul>
+            <button class="read-more-btn" onclick="readMore(6)">Read More</button>
+        </div>
+    </div>
+
+    <!-- Blog 7 -->
+    <div class="blog-card">
+        <img src="https://images.unsplash.com/photo-1648659125396-5bf148702e3d?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mjd8fFN0cmVzcyUyMCUyNiUyMFdlaWdodCUyMENvbm5lY3Rpb258ZW58MHx8MHx8fDA%3D&auto=format&fit=crop&q=60&w=600" class="blog-img">
+        <div class="blog-content">
+            <h2>Stress & Weight Connection</h2>
+            <p>Stress increases cravings & stores belly fat. Balance mind for better weight control.</p>
+            <h3>Reduce Stress</h3>
+            <ul>
+                <li>10-minute meditation</li>
+                <li>Evening walk</li>
+                <li>Good sleep routine</li>
+                <li>Limit caffeine</li>
+            </ul>
+            <button class="read-more-btn" onclick="readMore(7)">Read More</button>
+        </div>
+    </div>
+
+    <!-- Blog 8 -->
+    <div class="blog-card">
+        <img src="https://images.unsplash.com/photo-1605296867304-46d5465a13f1?auto=format&fit=crop&w=900&q=60" class="blog-img">
+        <div class="blog-content">
+            <h2>Weight Loss Without Gym</h2>
+            <p>You can lose fat at home with everyday habits — no gym required.</p>
+            <h3>How to Start</h3>
+            <ul>
+                <li>8000-10,000 steps daily</li>
+                <li>Home workouts</li>
+                <li>High-protein meals</li>
+                <li>Portion control</li>
+            </ul>
+            <button class="read-more-btn" onclick="readMore(8)">Read More</button>
+        </div>
+    </div>
+
+
+
+</div>
+
+<script src="blogs.js"></script>
+</body>
+</html>
