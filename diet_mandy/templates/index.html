@@ -73,12 +73,10 @@
 <!-- ✅ Diet Topics -->
 <section id="diets">
     <h2>Health Analysis</h2>
-
     <div class="card-container">
-
         <!-- Weight Loss Diet -->
         <div class="card">
-            <img src="{% static 'Images/image_copy_2.png' %}" alt="Weight Loss Diet">
+        <img src="{% static 'Images\image copy 3.png' %}" alt="Weight Loss Diet">
             <h3>Weight Loss Diet</h3>
             <p>Low-calorie meals, portion control & high-fiber foods to burn fat naturally.</p>
             <a href="{% url 'weight_calculator' %}" class="btn">Check Ideal Weight</a>
@@ -86,21 +84,21 @@
 
         <!-- Muscle Gain Diet -->
         <div class="card">
-            <img src="{% static '' %}" alt="Weight Loss Diet">
+            <img src="{% static 'Images\image copy 6.png' %}" alt="Weight Loss Diet">
             <h3>Muscle Gain Diet</h3>
             <p>High protein meals, healthy carbs & strength-support nutrients.</p>
         </div>
 
         <!-- Keto Diet -->
         <div class="card">
-        <img src="{% static '' %}" alt="Weight Loss Diet">
+        <img src="{% static 'Images\image copy 4.png' %}" alt="Weight Loss Diet">
             <h3>Keto Diet</h3>
             <p>Low-carb, high-fat meals that turn body fat into energy.</p>
         </div>
 
         <!-- Diabetic-Friendly Diet -->
         <div class="card">
-            <img src="{% static '' %}" alt="Weight Loss Diet">
+            <img src="{% static 'Images\image copy 5.png' %}" alt="Weight Loss Diet">
             <h3>Diabetic-Friendly Diet</h3>
             <p>Low sugar & fiber-rich foods to stabilize blood sugar levels.</p>
         </div>
@@ -108,7 +106,9 @@
         <!-- Add more new diet cards below -->
 
         <div class="card">
-            <img src="{% static '' %}" alt="Weight Loss Diet">
+        <img src="{% static 'Images/image copy 2.png' %}" alt="Weight Loss Diet">
+
+
             <h3>PCOS/PCOD Diet</h3>
             <p>Balanced carbs, high fiber & anti-inflammatory foods to manage hormones.</p>
         </div>
@@ -121,26 +121,58 @@
 
 
 <!-- ✅ Success Stories -->
-<section id="success">
-    <h2>Success Stories</h2>
-    <div class="card-container">
-        <div class="card">🔥 Lost 20kg in 5 Months</div>
-        <div class="card">💪 Muscle Gain Journey</div>
-        <div class="card">🌟 Medical Condition Success</div>
+
+    
+    <p class="success-subtitle">
+        Success Stories
+    </p>
+
+    <div class="card-container success-grid">
+
+        <div class="success-card">
+            <img src="{% static 'Images\image.png' %}" alt="Transformation Image">
+            <h3>Lost 20kg in 5 Months</h3>
+            <p class="story">
+                "I struggled with weight for years. Through personalized diet plans and weekly tracking,
+                I finally achieved my goal! More energy, more confidence!"
+            </p>
+            <p class="client-name">— Riya Sharma</p>
+        </div>
+
+        <div class="success-card">
+            <img src="{% static 'Images\image copy.png' %}" alt="Transformation Image">
+            <h3>Muscle Gain Journey</h3>
+            <p class="story">
+                "From skinny to strong! Clean diet, proper protein intake & discipline helped me gain 
+                8kg lean muscle in 4 months."
+            </p>
+            <p class="client-name">— Aditya Singh</p>
+        </div>
+
+        <div class="success-card">
+            <img src="{% static 'Images\image copy 7.png' %}" alt="Transformation Image">
+            <h3>PCOS Health Improvement</h3>
+            <p class="story">
+                "My periods got regular & energy levels improved. A mindful nutrition plan changed my life."
+            </p>
+            <p class="client-name">— Priya Mehta</p>
+        </div>
+
     </div>
 </section>
 
 
+
 <!-- ✅ Exciting Call-to-Action Section -->
 <section class="cta-calculator">
-    <h2>Ready to Discover Your Perfect Diet Plan? 🧠🍏</h2>
+    <h2>Ready to Discover Your Perfect Diet Plan?</h2>
     <p>
         Your body has a story — let our smart nutrition tool reveal it.  
         Track your BMI, calories & macros and unlock your personalized diet plan!
     </p>
 
     <a href="{% url 'calculator' %}" class="cta-button">
-        🚀 Start My Health Analysis
+         Start My Health Analysis
     </a>
 
     <p class="mini-note">Takes less than 2 minutes ⏳ — No guesswork, just science!</p>
