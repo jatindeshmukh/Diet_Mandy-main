@@ -17,7 +17,7 @@
     <div class="logo">🥗 Diet Mandy</div>
     <ul>
         <li><a href="#home" class="active">Home</a></li>
-        <li><a href="#why">Why We’re Different</a></li>
+        <li><a href="#why-different">Why We're Different</a></li>
         <li><a href="#diets">Health Analysis</a></li>
         <li><a href="{% url 'blogs' %}">Blog </a></li>
         
@@ -36,7 +36,9 @@
     <div>
         <h2>Transform Your Health</h2>
         <p>Personalized diet guidance for real results.</p>
-        <a href="{% url 'signup' %}" class="cta">Start Now</a>
+        <a href="{% url 'signup' %}" >
+            <button class="cta">Start Now
+            </button></a>
     </div>
 
     <img src="https://images.unsplash.com/photo-1490645935967-10de6ba17061?auto=format&fit=crop&w=800&q=80">
@@ -44,7 +46,7 @@
 
 <!-- ✅ Why We’re Different -->
 <section id="why-different" class="why-section">
-    <h2>Why We’re Different</h2>
+    <h2>Why We're Different</h2>
 
     <div class="why-container">
 
@@ -83,7 +85,10 @@
         <img src="{% static 'Images\image copy 3.png' %}" alt="Weight Loss Diet">
             <h3>Weight Loss Diet</h3>
             <p>Low-calorie meals, portion control & high-fiber foods to burn fat naturally.</p>
-            <a href="{% url 'weight_calculator' %}" class="btn">Check Ideal Weight</a>
+            <a href="{% url 'weight_calculator' %}">
+                <button class="diet_btn">Check Ideal Weight
+                </button>
+                </a>
         </div>
 
         <!-- Muscle Gain Diet -->
