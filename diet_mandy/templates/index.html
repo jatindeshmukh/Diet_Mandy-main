@@ -7,7 +7,7 @@
     <title>Diet Mandy | Your Health Partner</title>
 
     <link rel="stylesheet" href="{% static 'practice.css' %}">
-    <script defer src="{% static 'practice.js' %}"></script>
+    <script defer src="{% static 'js/practice.js' %}"></script>
 </head>
 
 <body>
@@ -22,7 +22,11 @@
         <li><a href="{% url 'blogs' %}">Blog </a></li>
         
         <!-- ✅ Your Django Login / Signup -->
-        <li><a href="{% url 'login' %}">Login</a></li>
+        {% if user.is_authenticated %}
+            <li><a href="{% url 'logout' %}">Logout</a></li>
+        {% else %}
+            <li><a href="{% url 'login' %}">Login</a></li>
+        {% endif %}
         <li><a href="{% url 'signup' %}" class="cta">Sign Up</a></li>
     </ul>
 </nav>

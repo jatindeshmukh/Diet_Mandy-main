@@ -1,22 +1,78 @@
-from django.shortcuts import render
+from django.shortcuts import render, redirect
+from django.contrib.auth.models import User
+from django.contrib.auth import authenticate, login, logout
+from django.utils import timezone
+from django.contrib.auth.decorators import login_required
+from django.contrib import messages
 
 # Create your views here.
-from django.shortcuts import render
-
-def index(request):
-    if request.method == 'POST':
-        name = request.POST.get('name')
-        print("Form received:", name)  # just to confirm in your terminal
-        context = {'message': f'Thank you, {name}!' if name else 'Form submitted!'}
-        return render(request, 'index.html', context)
-    
+# @login_required
+def index(request):    
     return render(request, 'index.html')
 
 def login_page(request):
-    return render(request, 'login.html')
+    if request.method == "POST":
+        email = request.POST.get("email")
+        password = request.POST.get("password")
+        print("Login attempt:", email)  # Debug print
+        
+        try:
+            # First get the user with this email
+            user = User.objects.filter(email=email).first()
+            if user is not None:
+                print("----------------User Found-----------------" + user.username, user.email, user.password)
+                # Try to authenticate with username (email) and password
+                # authenticated_user = authenticate(request, username=user.username, password=password)
+                # if authenticated_user is not None:
+                #     print("----------------Login Successful-----------------")
+                # else:
+                #     print("Authentication failed for user:", email)
+                if password == user.password: # For now checking password manually without the authenticate function as it seems not working
+                    login(request, user)
+                    return redirect('index')
+                else:
+                    raise ValueError("Invalid password")
+            else:
+                print("No user found with this email:", email)
+                
+        except Exception as e:
+            print("Login error:", str(e))
+            print("Redirecting to login page again.")
+        
+        return redirect('login')
+
+    if request.method == "GET":
+        return render(request, 'login.html')
+
+def logout_view(request):
+    logout(request)
+    return redirect('login')
 
 def signup_page(request):
-    return render(request, 'signup.html')
+    if request.method == "POST":
+        print("--------------Here-------------------------")
+        name = request.POST["fullname"]
+        email = request.POST["email"]
+        password = request.POST["password"]
+        firstname, lastname, *extra = name.split(" ")
+        print("Form received:", name)  # just to confirm in your terminal
+        
+        # Create user with create_user to properly hash the password
+        new_user = User.objects.create(
+            username=email,
+            email=email,
+            password=password,
+            first_name=firstname,
+            last_name=lastname
+        )
+        new_user.last_login = timezone.now()
+        new_user.save()
+        login(request, new_user)
+        messages.success(request, "Account created successfully! Please login.")
+        return redirect('index')
+    if request.method == "GET":
+        print("-------------------Get method-----------------------")
+        return render(request, 'signup.html')
 
 
 def calculator(request):       
