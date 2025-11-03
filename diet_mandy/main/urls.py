@@ -9,4 +9,6 @@ urlpatterns = [
     path('calculator/', views.calculator, name='calculator'), 
     path('weight_calculator/', views.weight_calculator, name='weight_calculator'), 
     path('blogs/', views.blogs, name='blogs'),
+  # Added this line
+
 ]

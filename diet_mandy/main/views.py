@@ -74,11 +74,11 @@ def signup_page(request):
         print("-------------------Get method-----------------------")
         return render(request, 'signup.html')
 
-
+@login_required
 def calculator(request):       
     return render(request, 'calculator.html')
 
-
+@login_required
 def blogs(request):       
     return render(request, 'blogs.html')
 
