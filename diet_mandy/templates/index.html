@@ -35,10 +35,18 @@
 <section id="home" class="hero">
     <div>
         <h2>Transform Your Health</h2>
-        <p>Personalized diet guidance for real results.</p>
+    <p>Personalized diet guidance for real results — built around your goals, body type, and lifestyle.</p>
+
+    <ul class="hero-points">
+      <li> Customized nutrition plans designed by experts</li>
+      <li> Track your progress and stay motivated every day</li>
+      <li> Learn how to eat smarter, not less</li>
+    </ul>
         <a href="{% url 'signup' %}" >
             <button class="cta">Start Now
             </button></a>
+
+            
     </div>
 
     <img src="https://images.unsplash.com/photo-1490645935967-10de6ba17061?auto=format&fit=crop&w=800&q=80">
@@ -51,7 +59,7 @@
     <div class="why-container">
 
         <div class="why-card">
-            <div class="why-icon">🥗</div>
+            <div class="why-icon">📝</div>
             <h3> Personalized Plans</h3>
             <p>Tailored nutrition plans built around your body, lifestyle, and daily routine — so you enjoy balanced meals that fit your taste, schedule, and health goals.</p>
         </div>
@@ -69,7 +77,7 @@
         </div>
 
         <div class="why-card">
-            <div class="why-icon">🥗</div>
+            <div class="why-icon">🏃‍♂️📈</div>
             <h3>Smart Progress Tracking.</h3>
             <p>With Smart Progress Tracking, you can monitor your daily calories, macro balance (carbs, proteins & fats), water intake, weight changes, activity levels.</p>
         </div>
@@ -96,21 +104,34 @@
             <img src="{% static 'Images\image copy 6.png' %}" alt="Weight Loss Diet">
             <h3>Muscle Gain Diet</h3>
             <p>High protein meals, healthy carbs & strength-support nutrients.</p>
+                <a href="{% url 'muscle_gain_diet' %}">
+                <button class="diet_btn">View More
+                </button>
+                </a>
         </div>
 
         <!-- Keto Diet -->
         <div class="card">
         <img src="{% static 'Images\image copy 4.png' %}" alt="Weight Loss Diet">
             <h3>Keto Diet</h3>
-            <p>Low-carb, high-fat meals that turn body fat into energy.</p>
+            <p>Low-carb, high-fat meals that turn body fat into energy. Better energy levels.</p>
+            <a href="{% url 'kietos' %}">
+                <button class="diet_btn">View More
+                </button>
+                </a>
         </div>
 
         <!-- Diabetic-Friendly Diet -->
         <div class="card">
             <img src="{% static 'Images\image copy 5.png' %}" alt="Weight Loss Diet">
             <h3>Diabetic-Friendly Diet</h3>
-            <p>Low sugar & fiber-rich foods to stabilize blood sugar levels.</p>
+            <p>Low sugar & fiber-rich foods to stabilize blood sugar levels. Controls food cravings.</p>
+            <a href="{% url 'Diabetic_Friendly_Diet' %}">
+                <button class="diet_btn">View More
+                </button>
+                </a>
         </div>
+    
 
         <!-- Add more new diet cards below -->
 
@@ -120,6 +141,10 @@
 
             <h3>PCOS/PCOD Diet</h3>
             <p>Balanced carbs, high fiber & anti-inflammatory foods to manage hormones.</p>
+          <a href="{% url 'Pcod_diet' %}">
+                <button class="diet_btn">View More
+                </button>
+                </a>
         </div>
 
     

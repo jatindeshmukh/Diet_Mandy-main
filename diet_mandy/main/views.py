@@ -78,7 +78,7 @@ def signup_page(request):
 def calculator(request):       
     return render(request, 'calculator.html')
 
-@login_required
+
 def blogs(request):       
     return render(request, 'blogs.html')
 
@@ -86,6 +86,9 @@ def weight_calculator(request):
     return render(request, 'weight_calculator.html')
 
 
+
+# def muscle_gain_diet(request):
+#     return render(request, 'muscle_gain_diet.html') 
 
 from django.shortcuts import render, redirect
 from django.contrib.auth.models import User
@@ -130,6 +133,19 @@ def signup(request):
         return redirect('login')
 
     return render(request, 'signup.html')
+
+def  Diabetic_Friendly_Diet(request):       
+    return render(request, 'Diabetic_Friendly_Diet.html')
+
+def kietos(request):       
+    return render(request, 'kietos.html')
+
+def muscle_gain_diet(request):
+    return render(request, 'muscle_gain_diet.html')
+
+def Pcod_diet(request):
+    return render(request, 'Pcod_diet.html')
+    
 
 
 # from django.shortcuts import render, redirect
