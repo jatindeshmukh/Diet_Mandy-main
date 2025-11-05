@@ -65,32 +65,91 @@
     /* =========================
    Hero Section
 ========================= */
+    /* HERO SECTION */
     
     .hero {
         display: flex;
         justify-content: space-between;
         align-items: center;
-        padding: 120px 40px 60px;
+        padding: 110px 60px;
+        background: linear-gradient(to right, #edfff1, #f7fff9);
     }
+    /* Left Text Section */
     
-    .hero div {
-        max-width: 50%;
+    .hero-content {
+        max-width: 48%;
+        animation: fadeInLeft 1s ease forwards;
     }
     
     .hero h2 {
-        font-size: 44px;
+        font-size: 52px;
         font-weight: 700;
-        margin-bottom: 15px;
+        margin-bottom: 18px;
+        line-height: 1.2;
+        color: #1c1c1c;
     }
     
     .hero p {
-        font-size: 18px;
-        margin-bottom: 20px;
+        font-size: 19px;
+        margin-bottom: 25px;
+        color: #444;
+    }
+    /* Bullet Points */
+    
+    .hero-list {
+        margin-bottom: 35px;
+        padding-left: 0;
+        list-style: none;
     }
     
+    .hero-list li {
+        font-size: 18px;
+        margin-bottom: 10px;
+        display: flex;
+        align-items: center;
+        gap: 8px;
+    }
+    /* CTA Button */
+    
+    .cta {
+        padding: 12px 28px;
+        font-size: 18px;
+        border-radius: 30px;
+        border: none;
+        background: #2ecc71;
+        color: white;
+        cursor: pointer;
+        transition: 0.3s ease;
+    }
+    
+    .cta:hover {
+        background: #27ae60;
+        transform: translateY(-2px);
+    }
+    /* Hero Image Styles */
+    
     .hero img {
-        width: 45%;
-        border-radius: 14px;
+        width: 46%;
+        border-radius: 20px;
+        object-fit: cover;
+        box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.15);
+        transition: transform 0.5s ease;
+    }
+    
+    .hero img:hover {
+        transform: scale(1.04);
+    }
+    /* Subtle Animation */
+    
+    @keyframes fadeInLeft {
+        from {
+            opacity: 0;
+            transform: translateX(-40px);
+        }
+        to {
+            opacity: 1;
+            transform: translateX(0);
+        }
     }
     /* =========================
    Sections
