@@ -145,6 +145,9 @@ def muscle_gain_diet(request):
 
 def Pcod_diet(request):
     return render(request, 'Pcod_diet.html')
+
+def inquiry(request):
+    return render(request, 'Inquiry.html')
     
 
 
