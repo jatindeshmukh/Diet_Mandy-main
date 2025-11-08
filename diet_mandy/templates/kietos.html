@@ -6,17 +6,9 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Keto Diet | Diet Mandi</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
 
     <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-        
+        * { margin: 0; padding: 0; box-sizing: border-box; }
         body {
             font-family: 'Poppins', sans-serif;
             background-color: #f6fff6;
@@ -24,7 +16,7 @@
             line-height: 1.8;
             overflow-x: hidden;
         }
-        
+
         header {
             background-color: #ffffff;
             box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
@@ -36,80 +28,49 @@
             top: 0;
             z-index: 1000;
         }
-        
-        header h1 {
-            color: #2e7d32;
-            font-size: 26px;
-            font-weight: 700;
-        }
-        
-        nav ul {
-            list-style: none;
-            display: flex;
-            gap: 25px;
-        }
-        
-        nav ul li a {
-            text-decoration: none;
-            color: #333;
-            font-weight: 500;
-            transition: color 0.3s ease;
-        }
-        
-        nav ul li a:hover {
-            color: #2e7d32;
-        }
-        
+        header h1 { color: #2e7d32; font-size: 26px; font-weight: 700; }
+
+        /* HERO UPDATED TO 2 COLUMN */
         .hero {
+            display: grid;
+            grid-template-columns: 1.1fr 0.9fr;
+            align-items: center;
+            padding: 80px 60px;
             background: linear-gradient(to right, #e8f5e9, #ffffff);
-            text-align: center;
-            padding: 100px 60px 60px;
+            gap: 40px;
         }
-        
-        .hero h2 {
-            font-size: 44px;
-            color: #1b5e20;
-            font-weight: 700;
-            margin-bottom: 15px;
+        .hero-text h2 { font-size: 42px; color: #1b5e20; font-weight: 700; margin-bottom: 14px; }
+        .hero-text p { font-size: 18px; color: #333; max-width: 600px; }
+        .hero-img {
+            width: 100%;
+            height: 360px;
+            border-radius: 18px;
+            overflow: hidden;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.08);
         }
-        
-        .hero p {
-            font-size: 18px;
-            color: #333;
-            max-width: 800px;
-            margin: 0 auto;
-        }
-        
+        .hero-img img { width: 100%; height: 100%; object-fit: cover; }
+
+        /* Main Content Container */
         section {
-            max-width: 1100px;
-            margin: 50px auto;
+            max-width: 900px;
+            margin: -30px auto 60px;
             background: #ffffff;
             border-radius: 16px;
             box-shadow: 0 8px 25px rgba(0, 0, 0, 0.08);
-            padding: 60px 70px;
+            padding: 50px 45px;
         }
-        
+
         section h3 {
-            text-align: center;
+            text-align: left;
             color: #2e7d32;
             font-size: 30px;
-            margin-bottom: 30px;
             font-weight: 700;
+            margin-bottom: 25px;
         }
-        
-        h4 {
-            color: #1b5e20;
-            font-size: 22px;
-            margin: 25px 0 10px;
-        }
-        
-        p {
-            margin-bottom: 15px;
-            text-align: justify;
-            font-size: 17px;
-            color: #2e2e2e;
-        }
-        
+
+        h4 { color: #1b5e20; font-size: 22px; margin: 22px 0 10px; }
+        p { margin-bottom: 14px; font-size: 17px; color: #2e2e2e; text-align: justify; }
+
         footer {
             background: #e8f5e9;
             text-align: center;
@@ -117,15 +78,11 @@
             font-size: 14px;
             color: #1b5e20;
         }
-        
-        @media (max-width: 900px) {
-            header {
-                flex-direction: column;
-                padding: 15px 30px;
-            }
-            section {
-                padding: 30px;
-            }
+
+        @media (max-width: 1024px) {
+            .hero { grid-template-columns: 1fr; padding: 60px 30px; text-align: center; }
+            .hero-img { margin-top: 20px; height: 280px; }
+            section { margin: 20px 16px; padding: 30px 22px; }
         }
     </style>
 </head>
@@ -135,9 +92,15 @@
         <h1>Diet Mandy</h1>
     </header>
 
+    <!-- NEW HERO LAYOUT -->
     <div class="hero">
-        <h2>Keto Diet — Full Detailed Guide</h2>
-        <p>Transform your body by shifting your metabolism. The Keto Diet helps you burn fat efficiently through a low-carb, high-fat approach.</p>
+        <div class="hero-text">
+            <h2>Keto Diet — Full Detailed Guide</h2>
+            <p>Transform your body by shifting your metabolism. The Keto Diet helps you burn fat efficiently through a low-carb, high-fat approach.</p>
+        </div>
+        <div class="hero-img">
+            <img src="{% static 'Images\image copy 14.png' %}" alt="Keto healthy food">
+        </div>
     </div>
 
     <section>
@@ -146,7 +109,6 @@
             faster fat loss and improved energy levels. The goal is to limit carb intake to around 20-50 grams per day while increasing fats and maintaining moderate protein levels.</p>
 
         <h4>🥑 What to Eat on a Keto Diet</h4>
-        <p>The Keto Diet focuses on foods rich in healthy fats and proteins while minimizing carbs. Your plate should be filled with whole, nutrient-dense foods like:</p>
         <p><strong>Healthy Fats:</strong> Avocados, olive oil, coconut oil, butter, ghee, nuts, and seeds.</p>
         <p><strong>Protein Sources:</strong> Eggs, chicken, fish, paneer, tofu, and meat.</p>
         <p><strong>Low-Carb Vegetables:</strong> Spinach, broccoli, zucchini, kale, and cauliflower.</p>
@@ -154,39 +116,32 @@
         <p><strong>Beverages:</strong> Water, black coffee, green tea, and herbal teas.</p>
 
         <h4>🚫 Foods to Avoid</h4>
-        <p>To stay in ketosis, you must minimize carbs and avoid processed and sugary foods. These include:</p>
-        <p>🍞 Bread, rice, pasta, potatoes, cereals, and all high-carb grains.</p>
-        <p>🍰 Sugary snacks like cakes, candies, ice cream, and sweetened drinks.</p>
-        <p>🍎 High-sugar fruits such as bananas, mangoes, and grapes.</p>
-        <p>🥫 Processed foods and vegetable oils like sunflower or soybean oil.</p>
+        <p>🍞 Bread, rice, pasta, potatoes, cereals.<br>
+           🍰 Sweets, desserts, sweetened drinks.<br>
+           🍎 High-sugar fruits like bananas & mangoes.<br>
+           🥫 Processed oils & packaged foods.</p>
 
         <h4>⚡ How Keto Works</h4>
-        <p>When your carb intake drops, insulin levels decrease and the liver begins to convert fat into ketones — your new energy source. This metabolic switch increases fat burning, reduces appetite, and improves mental focus. The result? Efficient fat
-            loss and better control over energy and hunger.</p>
+        <p>When carbs drop, insulin decreases and the liver converts fat to ketones — your new energy source. This helps burn fat efficiently and reduce hunger.</p>
 
         <h4>🍽️ Sample Keto Meal Plan</h4>
-        <p><strong>Breakfast:</strong> Scrambled eggs cooked in butter + avocado slices.</p>
-        <p><strong>Lunch:</strong> Grilled chicken with spinach and olive oil dressing.</p>
-        <p><strong>Snack:</strong> Handful of almonds or walnuts.</p>
-        <p><strong>Dinner:</strong> Paneer or fish curry with sautéed broccoli or zucchini.</p>
-        <p><strong>Drink plenty of water</strong> throughout the day and avoid sugary beverages.</p>
+        <p><strong>Breakfast:</strong> Scrambled eggs in butter + avocado.<br>
+           <strong>Lunch:</strong> Grilled chicken with spinach salad.<br>
+           <strong>Snack:</strong> Almonds / walnuts.<br>
+           <strong>Dinner:</strong> Paneer/fish with sautéed veggies.</p>
 
         <h4>💧 Hydration & Electrolytes</h4>
-        <p>In the first few days of Keto, your body releases stored water along with sodium, potassium, and magnesium — leading to fatigue or cramps. To prevent this, drink 3–4 liters of water daily and include electrolytes such as coconut water, lemon with
-            salt, and mineral supplements.</p>
+        <p>Drink 3–4 liters daily. Add coconut water, rock salt, and magnesium to avoid cramps and fatigue.</p>
 
         <h4>⚙️ Benefits of Keto Diet</h4>
-        <p>✅ Rapid fat loss and reduced belly fat.<br> ✅ Improved focus, energy, and mental clarity.<br> ✅ Better blood sugar and insulin control.<br> ✅ Lower hunger and improved satiety.<br> ✅ Supports heart health when done correctly.</p>
+        <p>✅ Rapid fat loss<br> ✅ More energy<br> ✅ Controlled appetite<br> ✅ Stable blood sugar</p>
 
         <h4>⚠️ Side Effects (Keto Flu)</h4>
-        <p>During the first week, some people experience “Keto Flu” — headaches, fatigue, or irritability as the body adapts. Stay hydrated, include electrolytes, and gradually reduce carbs instead of quitting them overnight.</p>
+        <p>Headache, tiredness, irritability in the first 3–5 days. Keep electrolytes high and reduce carbs gradually.</p>
 
         <h4>💡 Final Words</h4>
-        <p>The Keto Diet is one of the most effective approaches for fat loss, improving energy, and stabilizing blood sugar — but it must be done correctly. Focus on healthy fats, stay hydrated, and track your macros carefully. Avoid overdoing protein and
-            carbs. Consistency is key — once your body adapts, you'll feel more energized, focused, and fit than ever before. 🥑🔥</p>
+        <p>Done correctly, Keto can transform energy, fat loss, and focus. Track carbs, eat healthy fats, stay hydrated, and stay consistent. 🥑🔥</p>
     </section>
-
-
 </body>
 
 </html>

@@ -6,16 +6,9 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Muscle Gain Diet | Diet Mandi</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+
     <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-        
+        * { margin: 0; padding: 0; box-sizing: border-box; }
         body {
             font-family: 'Poppins', sans-serif;
             background-color: #f6fff6;
@@ -23,157 +16,159 @@
             line-height: 1.8;
             overflow-x: hidden;
         }
-        
         header {
             background-color: #ffffff;
             box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
             padding: 20px 80px;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            position: sticky;
-            top: 0;
-            z-index: 1000;
+            display: flex; justify-content: space-between; align-items: center;
+            position: sticky; top: 0; z-index: 1000;
         }
-        
-        header h1 {
-            color: #2e7d32;
-            font-size: 26px;
-            font-weight: 700;
-        }
-        
-        nav ul {
-            list-style: none;
-            display: flex;
-            gap: 25px;
-        }
-        
-        nav ul li a {
-            text-decoration: none;
-            color: #333;
-            font-weight: 500;
-            transition: color 0.3s ease;
-        }
-        
-        nav ul li a:hover {
-            color: #2e7d32;
-        }
-        
+        header h1 { color: #2e7d32; font-size: 26px; font-weight: 700; }
+
+        /* HERO */
         .hero {
-            background: linear-gradient(to right, #e8f5e9, #ffffff);
-            text-align: center;
-            padding: 100px 60px 60px;
+            padding: 80px 60px;
+            display: grid;
+            grid-template-columns: 1.2fr 0.8fr;
+            align-items: center;
+            gap: 50px;
+            background: linear-gradient(120deg, #e9f7ee, #ffffff 60%);
         }
-        
-        .hero h2 {
-            font-size: 44px;
-            color: #1b5e20;
-            font-weight: 700;
-            margin-bottom: 15px;
+        .hero .hero-copy h2 { font-size: 44px; color: #1b5e20; font-weight: 700; margin-bottom: 14px; }
+        .hero .hero-copy p  { font-size: 18px; color: #333; max-width: 620px; }
+
+        .hero .hero-media {
+            width: 100%;
+            height: 420px;
+            border-radius: 22px;
+            overflow: hidden;
+            border: 4px solid #dff1e2;
+            box-shadow: 0 10px 35px rgba(0,0,0,0.12);
         }
-        
-        .hero p {
-            font-size: 18px;
-            color: #333;
-            max-width: 800px;
-            margin: 0 auto;
-        }
-        
+        .hero .hero-media img { width: 100%; height: 100%; object-fit: cover; }
+
+        /* MAIN SECTION */
         section {
-            max-width: 1100px;
-            margin: 50px auto;
-            background: #ffffff;
-            border-radius: 16px;
-            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.08);
-            padding: 60px 70px;
+            max-width: 1100px; margin: 0 auto 60px; background: #ffffff;
+            border-radius: 16px; box-shadow: 0 8px 25px rgba(0, 0, 0, 0.08);
+            padding: 40px 28px;
+            transform: translateY(-28px);
         }
-        
+        .content-wrap { width: min(820px, 100%); margin: 0 auto; }
+
+        /* FEATURE IMAGE */
+        .feature-img {
+            width: 100%;
+            border-radius: 18px;
+            box-shadow: 0 8px 25px rgba(0,0,0,0.1);
+            margin: 12px 0 28px;
+            object-fit: cover;
+            max-height: 420px;
+            border: 4px solid #e1f4e4;
+        }
+
         section h3 {
-            text-align: center;
-            color: #2e7d32;
-            font-size: 30px;
-            margin-bottom: 30px;
-            font-weight: 700;
+            text-align: left;
+            color: #2e7d32; font-size: 30px; margin-bottom: 22px; font-weight: 700;
         }
-        
-        h4 {
-            color: #1b5e20;
-            font-size: 22px;
-            margin: 25px 0 10px;
+        h4 { color: #1b5e20; font-size: 22px; margin: 22px 0 10px; }
+        p  { margin-bottom: 14px; text-align: justify; font-size: 17px; color: #2e2e2e; }
+
+        .pill-row {
+            display: flex; gap: 12px; flex-wrap: wrap; justify-content: center; margin: 14px 0 6px;
         }
-        
-        p {
-            margin-bottom: 15px;
-            text-align: justify;
-            font-size: 17px;
-            color: #2e2e2e;
+        .pill {
+            display: inline-flex; align-items: center; gap: 10px;
+            background: #f1fbf1; border: 1px solid #d6ecd6; border-radius: 999px;
+            padding: 8px 14px; font-size: 14px; color: #1b5e20;
         }
-        
-        footer {
-            background: #e8f5e9;
-            text-align: center;
-            padding: 25px;
-            font-size: 14px;
-            color: #1b5e20;
+        .pill img { width: 22px; height: 22px; object-fit: contain; }
+
+        .tips-grid {
+            display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 16px; margin-top: 14px;
         }
-        
-        @media (max-width: 900px) {
-            header {
-                flex-direction: column;
-                padding: 15px 30px;
-            }
-            section {
-                padding: 30px;
-            }
+        .tip-card {
+            border: 1px solid #e6f2e6; border-radius: 14px; padding: 14px;
+            display: flex; gap: 12px; align-items: flex-start; background: #fcfffc;
+        }
+        .tip-card img { width: 52px; height: 52px; object-fit: cover; border-radius: 10px; }
+        .tip-card h5 { margin: 2px 0 6px; font-size: 16px; color: #1b5e20; }
+        .tip-card p { margin: 0; font-size: 14px; color: #355; text-align: left; }
+
+        footer { background: #e8f5e9; text-align: center; padding: 25px; font-size: 14px; color: #1b5e20; }
+
+        @media (max-width: 1024px) {
+            .hero { grid-template-columns: 1fr; padding: 60px 28px 48px; }
+            .hero .hero-media { height: 260px; }
+            section { padding: 28px 20px; margin: 0 16px 50px; transform: none; }
         }
     </style>
 </head>
 
 <body>
-    <header>
-        <h1>Diet Mandy</h1>
 
-    </header>
+<header>
+    <h1>Diet Mandi</h1>
+</header>
 
-    <div class="hero">
-        <h2>Muscle Gain Diet — Full Detailed Guide</h2>
-        <p>Eat smart, train hard, and recover right. Build lean muscle naturally with balanced nutrition, proper hydration, and the right meal timing.</p>
+<div class="hero">
+    <div class="hero-copy">
+        <h2>Muscle Gain Diet</h2>
+        <p>Build lean muscle with clean nutrition, strong protein choices, and strategic meal timing.</p>
     </div>
+    <div class="hero-media">
+        <img src="{% static 'Images\image copy 11.png' %}" alt="Muscle gain healthy meal">
+    </div>
+</div>
 
-    <section>
-        <h3>Muscle Gain Diet Explained</h3>
-        <p>A muscle gain diet is not just about eating more food — it's about eating the right kind of food at the right time to support muscle growth, recovery, and performance. To build lean muscle, your body needs a balance of high-quality protein, complex
-            carbohydrates, healthy fats, and essential micronutrients. Along with proper rest, hydration, and consistent workouts, the right diet helps you grow stronger, healthier, and more defined muscles naturally.</p>
+<section>
+    <div class="content-wrap">
 
-        <h4>🥩 Protein — The Foundation of Muscle Building</h4>
-        <p>Protein repairs and rebuilds muscle fibers after workouts. Include chicken, eggs, fish, paneer, tofu, soy chunks, lentils, chickpeas, milk, and Greek yogurt. Consume 1.6–2.2 grams per kg of body weight per day.</p>
 
-        <h4>🍚 Carbohydrates — The Energy Source for Growth</h4>
-        <p>Carbs fuel your workouts and recovery. Focus on oats, brown rice, quinoa, whole wheat roti, sweet potatoes, and fruits like bananas or apples. Eat carbs before and after workouts for best performance.</p>
 
-        <h4>🥑 Healthy Fats — The Hormone Balancers</h4>
-        <p>Fats help regulate testosterone and nutrient absorption. Add avocados, almonds, walnuts, olive oil, and peanut butter to your diet. Avoid fried or processed foods that harm recovery.</p>
+        <h3>Understanding the Muscle Gain Diet</h3>
+        <p>A Muscle Gain Diet is focused on increasing lean muscle mass through nutritious, high-protein foods...</p>
 
-        <h4>🥦 Micronutrients — The Hidden Strength Builders</h4>
-        <p>Micronutrients enhance muscle performance and recovery. Get Vitamin D, Zinc, Magnesium, and Iron from sunlight, nuts, spinach, and lean meats. Eat colorful veggies daily for diverse nutrients.</p>
+        <div class="pill-row">
+    <span class="pill">🥩 High Protein</span>
+    <span class="pill">🍚 Complex Carbs</span>
+    <span class="pill">🥑 Healthy Fats</span>
+    <span class="pill">💧 Hydration</span>
+    <span class="pill">⏱️ Meal Timing</span>
+</div>
 
-        <h4>🕒 Meal Timing and Frequency</h4>
-        <p>Eat 5–6 small meals daily. Start with a protein-rich breakfast, have fruits/nuts mid-morning, eat balanced lunches and dinners, and end your day with milk for overnight recovery.</p>
 
-        <h4>💧 Hydration and Electrolytes</h4>
-        <p>Drink 3–4 liters of water every day. Coconut water and lemon with salt help restore electrolytes after workouts. Hydration supports nutrient transport and energy levels.</p>
+        <h4>🍗 Protein — The Muscle Builder</h4>
+<p>Protein muscles ke broken fibers ko repair karta hai aur unhe strong aur bada banane mein help karta hai. Workout ke baad protein lena sabse effective hota hai kyunki body uss time nutrients ko jaldi absorb karti hai.</p>
 
-        <h4>🚀 Supplements for Faster Progress (Optional)</h4>
-        <p>Supplements like Whey Protein, Creatine, BCAA, Omega-3, and Multivitamins can support your goals — but real food should always come first.</p>
+<h4>🍚 Carbohydrates — Fuel for Strength</h4>
+<p>Carbs aapke muscles ke fuel stores yani glycogen ko refill karte hain. Agar carbs kam honge toh workout weak ho jayega aur stamina jaldi khatam hoga. Isliye complex carbs ka daily intake zaroori hai.</p>
 
-        <h4>😴 Rest and Sleep — The Secret of Real Growth</h4>
-        <p>Muscles grow when you rest, not when you train. Sleep 7-8 hours every night and include rest days after every few training sessions.</p>
+<h4>🥑 Healthy Fats — Hormonal Support</h4>
+<p>Healthy fats body ke hormones ko balance rakhte hain, specially testosterone, jo muscle growth aur recovery ke liye important hai. Ye inflammation ko bhi kam karte hain aur joints ko support dete hain.</p>
 
-        <h4>💡 Final Words</h4>
-        <p>Consistency, discipline, and smart eating are the keys to muscle gain. Train hard, recover well, and fuel your body with the right nutrition — no shortcuts, just results! 💪🔥</p>
-    </section>
+<h4>🕒 Meal Timing</h4>
+<p>Dino mein 5-6 small meals khane se metabolism active rehta hai aur body ko lagataar nutrients milte rehte hain. Har meal mein thoda protein zaroor include karo taaki muscle recovery ruki na rahe.</p>
 
+
+        <div class="tips-grid">
+            <div class="tip-card">
+            
+                <div><h5>Pre-Workout Meal</h5><p>Oats + banana + peanut butter.</p></div>
+            </div>
+            <div class="tip-card">
+                
+                <div><h5>Protein Every Meal</h5><p>Paneer, eggs, chicken, tofu.</p></div>
+            </div>
+            <div class="tip-card">
+                
+                <div><h5>Healthy Fats</h5><p>Walnuts, almonds & olive oil.</p></div>
+            </div>
+        </div>
+
+    </div>
+</section>
 
 </body>
-
 </html>

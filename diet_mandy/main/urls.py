@@ -1,5 +1,6 @@
 from django.urls import path
 from . import views
+from .views import inquiry_success   
 
 urlpatterns = [
     path('', views.index, name='index'),
@@ -13,10 +14,6 @@ urlpatterns = [
     path('kietos/', views.kietos , name='kietos'),
     path('muscle_gain_diet/', views.muscle_gain_diet , name='muscle_gain_diet'),
     path('Pcod_diet/', views.Pcod_diet , name='Pcod_diet'),
-    path('Inquiry.html', views.inquiry , name='inquiry'),
-    
-  # Added this line
-  
-
-
+    path('inquiry/', views.inquiry, name='inquiry'),
+    path('inquiry/success/', views.inquiry_success, name='inquiry-success'),
 ]

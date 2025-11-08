@@ -6,17 +6,9 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Diabetic-Friendly Diet | Diet Mandi</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
 
     <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-        
+        * { margin: 0; padding: 0; box-sizing: border-box; }
         body {
             font-family: 'Poppins', sans-serif;
             background-color: #f6fff6;
@@ -24,108 +16,84 @@
             line-height: 1.8;
             overflow-x: hidden;
         }
-        
         header {
             background-color: #ffffff;
             box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
             padding: 20px 80px;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            position: sticky;
-            top: 0;
-            z-index: 1000;
+            display: flex; justify-content: space-between; align-items: center;
+            position: sticky; top: 0; z-index: 1000;
         }
-        
-        header h1 {
-            color: #2e7d32;
-            font-size: 26px;
-            font-weight: 700;
-        }
-        
-        nav ul {
-            list-style: none;
-            display: flex;
-            gap: 25px;
-        }
-        
-        nav ul li a {
-            text-decoration: none;
-            color: #333;
-            font-weight: 500;
-            transition: color 0.3s ease;
-        }
-        
-        nav ul li a:hover {
-            color: #2e7d32;
-        }
-        
+        header h1 { color: #2e7d32; font-size: 26px; font-weight: 700; }
+
+        /* Updated HERO: 2-column, left content / right image */
         .hero {
+            padding: 80px 60px;
+            display: grid;
+            grid-template-columns: 1.1fr 0.9fr;
+            align-items: center;
+            gap: 40px;
             background: linear-gradient(to right, #e8f5e9, #ffffff);
-            text-align: center;
-            padding: 100px 60px 60px;
         }
-        
-        .hero h2 {
-            font-size: 44px;
-            color: #1b5e20;
-            font-weight: 700;
-            margin-bottom: 15px;
+        .hero .hero-copy h2 { font-size: 44px; color: #1b5e20; font-weight: 700; margin-bottom: 14px; }
+        .hero .hero-copy p  { font-size: 18px; color: #333; max-width: 620px; }
+        .hero .hero-media {
+            width: 100%; height: 360px; border-radius: 18px; overflow: hidden;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.08);
         }
-        
-        .hero p {
-            font-size: 18px;
-            color: #333;
-            max-width: 800px;
-            margin: 0 auto;
-        }
-        
+        .hero .hero-media img { width: 100%; height: 100%; object-fit: cover; }
+
+        /* Main section centered & narrower for pro look */
         section {
-            max-width: 1100px;
-            margin: 50px auto;
-            background: #ffffff;
-            border-radius: 16px;
-            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.08);
-            padding: 60px 70px;
+            max-width: 1100px; margin: 0 auto 60px; background: #ffffff;
+            border-radius: 16px; box-shadow: 0 8px 25px rgba(0, 0, 0, 0.08);
+            padding: 40px 28px;
+            transform: translateY(-28px); /* slight overlap with hero for a premium card feel */
         }
-        
+        .content-wrap { width: min(820px, 100%); margin: 0 auto; }
+
         section h3 {
-            text-align: center;
-            color: #2e7d32;
-            font-size: 30px;
-            margin-bottom: 30px;
-            font-weight: 700;
+            text-align: left; /* left-align for professional feel */
+            color: #2e7d32; font-size: 30px; margin-bottom: 22px; font-weight: 700;
         }
-        
-        h4 {
-            color: #1b5e20;
-            font-size: 22px;
-            margin: 25px 0 10px;
+        h4 { color: #1b5e20; font-size: 22px; margin: 22px 0 10px; }
+        p  { margin-bottom: 14px; text-align: justify; font-size: 17px; color: #2e2e2e; }
+
+        /* Feature image positioned full width of content */
+        .feature-img {
+            width: 100%; border-radius: 14px; box-shadow: 0 6px 18px rgba(0,0,0,0.08);
+            margin: 6px 0 24px; object-fit: cover; max-height: 360px;
         }
-        
-        p {
-            margin-bottom: 15px;
-            text-align: justify;
-            font-size: 17px;
-            color: #2e2e2e;
+
+        /* Pills centered under intro */
+        .pill-row {
+            display: flex; gap: 12px; flex-wrap: wrap; justify-content: center; margin: 14px 0 6px;
         }
-        
-        footer {
-            background: #e8f5e9;
-            text-align: center;
-            padding: 25px;
-            font-size: 14px;
-            color: #1b5e20;
+        .pill {
+            display: inline-flex; align-items: center; gap: 10px;
+            background: #f1fbf1; border: 1px solid #d6ecd6; border-radius: 999px;
+            padding: 8px 14px; font-size: 14px; color: #1b5e20;
         }
-        
-        @media (max-width: 900px) {
-            header {
-                flex-direction: column;
-                padding: 15px 30px;
-            }
-            section {
-                padding: 30px;
-            }
+        .pill img { width: 22px; height: 22px; object-fit: contain; }
+
+        /* Tip cards in neat grid, auto-fit for responsive */
+        .tips-grid {
+            display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 16px; margin-top: 14px;
+        }
+        .tip-card {
+            border: 1px solid #e6f2e6; border-radius: 14px; padding: 14px;
+            display: flex; gap: 12px; align-items: flex-start; background: #fcfffc;
+        }
+        .tip-card img { width: 52px; height: 52px; object-fit: cover; border-radius: 10px; }
+        .tip-card h5 { margin: 2px 0 6px; font-size: 16px; color: #1b5e20; }
+        .tip-card p { margin: 0; font-size: 14px; color: #355; text-align: left; }
+
+        footer { background: #e8f5e9; text-align: center; padding: 25px; font-size: 14px; color: #1b5e20; }
+
+        @media (max-width: 1024px) {
+            .hero { grid-template-columns: 1fr; padding: 60px 28px 48px; }
+            .hero .hero-media { height: 260px; }
+            section { padding: 28px 20px; margin: 0 16px 50px; transform: none; }
         }
     </style>
 </head>
@@ -135,54 +103,107 @@
     <header>
         <h1>Diet Mandi</h1>
     </header>
+
+    <!-- HERO repositioned: text left, image right -->
+    <div class="hero">
+        <div class="hero-copy">
+            <h2>Diabetic-Friendly Diet</h2>
+            <p>Balanced meals, steady energy, and smarter food choices—designed to keep your blood sugar in control.</p>
+        </div>
+        <div class="hero-media">
+            <img src="{% static 'Images\taylor-kiser-EvoIiaIVRzU-unsplash.jpg' %}" alt="Healthy diabetic-friendly food assortment">
+        </div>
+    </div>
+
     <section>
-        <h3>Understanding the Diabetic-Friendly Diet</h3>
-        <p>A Diabetic-Friendly Diet helps manage blood sugar levels effectively while providing the nutrients your body needs for energy and health. It focuses on choosing whole, unprocessed foods with low glycemic index (GI) values — meaning they don’t
-            cause rapid spikes in blood sugar. The goal is to balance carbohydrates, proteins, and healthy fats in every meal to maintain steady energy throughout the day.</p>
+        <div class="content-wrap">
+            <img class="feature-img" src="{% static 'Images\anisa-wulan-asri-dSb8R7QAeLM-unsplash.jpg' %}" alt="Balanced diabetic-friendly plate with whole grains, lean protein, and veggies">
 
-        <h4>🥗 Key Principles</h4>
-        <p>✔️ Eat smaller, more frequent meals to prevent sudden sugar fluctuations.<br> ✔️ Focus on high-fiber foods like vegetables, legumes, and whole grains.<br> ✔️ Choose healthy fats and lean protein sources.<br> ✔️ Limit sugary drinks, refined carbs,
-            and deep-fried foods.</p>
+            <h3>Understanding the Diabetic-Friendly Diet</h3>
+            <p>A Diabetic-Friendly Diet helps manage blood sugar levels effectively while providing the nutrients your body needs for energy and health. It focuses on choosing whole, unprocessed foods with low glycemic index (GI) values — meaning they don’t
+                cause rapid spikes in blood sugar. The goal is to balance carbohydrates, proteins, and healthy fats in every meal to maintain steady energy throughout the day.</p>
 
-        <h4>🍞 Healthy Carbohydrates — The Smart Energy Source</h4>
-        <p>Carbs aren't the enemy — but choosing the right ones is vital. High-fiber complex carbohydrates digest slowly, keeping blood sugar stable.</p>
-        <p><strong>Best Choices:</strong> Brown rice, oats, quinoa, barley, sweet potatoes, and whole wheat bread.<br>
-            <strong>Avoid:</strong> White rice, refined flour, sugary cereals, and bakery items.</p>
+            <div class="pill-row">
+                <span class="pill">
+                        <span class="pill">🍚 Smart Carbs</span>
+                        <span class="pill">🍗 Lean Protein</span>
+                        <span class="pill">🥑 Healthy Fats</span>
+                        <span class="pill">🌽 High Fiber</span>
+                        <span class="pill">💧 Hydration</span>
 
-        <h4>🥩 Protein — Keeps You Full & Stabilizes Sugar</h4>
-        <p>Protein helps slow down the digestion of carbs and prevents sudden sugar spikes. It also helps maintain muscle mass and repair tissues.</p>
-        <p><strong>Good Sources:</strong> Eggs, fish, chicken, tofu, paneer, lentils, beans, and low-fat dairy. Choose grilled, baked, or boiled options instead of fried.</p>
+                </span>
+            </div>
 
-        <h4>🥑 Healthy Fats — For Heart & Sugar Control</h4>
-        <p>Healthy fats play an important role in managing diabetes as they help regulate cholesterol and reduce inflammation.</p>
-        <p><strong>Include:</strong> Olive oil, flaxseeds, chia seeds, walnuts, avocados, and almonds.<br>
-            <strong>Avoid:</strong> Processed oils, butter, ghee in excess, and deep-fried snacks.</p>
+            <h4>🥗 Key Principles</h4>
+            <p>✔️ Eat smaller, more frequent meals to prevent sudden sugar fluctuations.<br> ✔️ Focus on high-fiber foods like vegetables, legumes, and whole grains.<br> ✔️ Choose healthy fats and lean protein sources.<br> ✔️ Limit sugary drinks, refined carbs,
+                and deep-fried foods.</p>
 
-        <h4>🥦 Fiber & Micronutrients</h4>
-        <p>Fiber improves digestion, slows sugar absorption, and supports gut health. Micronutrients like magnesium, chromium, and vitamin D help in insulin function and glucose metabolism.</p>
-        <p><strong>Best Sources:</strong> Leafy greens, spinach, broccoli, carrots, beans, and citrus fruits like oranges and grapefruit.</p>
+            <h4>🍞 Healthy Carbohydrates — The Smart Energy Source</h4>
+            <p>Carbs aren't the enemy — but choosing the right ones is vital. High-fiber complex carbohydrates digest slowly, keeping blood sugar stable.</p>
+            <p><strong>Best Choices:</strong> Brown rice, oats, quinoa, barley, sweet potatoes, and whole wheat bread.<br>
+                <strong>Avoid:</strong> White rice, refined flour, sugary cereals, and bakery items.</p>
 
-        <h4>🕒 Meal Timing & Portion Control</h4>
-        <p>Spacing meals evenly throughout the day helps prevent sugar fluctuations. Eat every 3-4 hours with a mix of carbs, protein, and fat.</p>
-        <p><strong>Sample Routine:</strong><br> 🕖 Breakfast: Oats with milk + fruits like apple or papaya.<br> 🕛 Lunch: Brown rice + dal + grilled chicken/fish + salad.<br> 🕒 Evening Snack: Handful of nuts or roasted chickpeas.<br> 🕖 Dinner: Multigrain
-            roti + vegetables + paneer/tofu curry.<br> 💤 Before Bed: Glass of warm milk (unsweetened).</p>
+            <h4>🥩 Protein — Keeps You Full & Stabilizes Sugar</h4>
+            <p>Protein helps slow down the digestion of carbs and prevents sudden sugar spikes. It also helps maintain muscle mass and repair tissues.</p>
+            <p><strong>Good Sources:</strong> Eggs, fish, chicken, tofu, paneer, lentils, beans, and low-fat dairy. Choose grilled, baked, or boiled options instead of fried.</p>
 
-        <h4>💧 Hydration & Beverages</h4>
-        <p>Stay hydrated with water, green tea, or buttermilk. Avoid fruit juices and soft drinks as they cause sugar spikes. Herbal teas like cinnamon or fenugreek are also beneficial for stabilizing glucose levels.</p>
+            <h4>🥑 Healthy Fats — For Heart & Sugar Control</h4>
+            <p>Healthy fats play an important role in managing diabetes as they help regulate cholesterol and reduce inflammation.</p>
+            <p><strong>Include:</strong> Olive oil, flaxseeds, chia seeds, walnuts, avocados, and almonds.<br>
+                <strong>Avoid:</strong> Processed oils, butter, ghee in excess, and deep-fried snacks.</p>
 
-        <h4>🚫 Foods to Avoid</h4>
-        <p>❌ White bread, sweets, pastries, and sugary cereals.<br> ❌ Full-fat dairy, butter, and processed cheese in excess.<br> ❌ Fried foods, soft drinks, and alcohol.<br> ❌ High-sugar fruits like mangoes, grapes, and bananas.</p>
+            <h4>🥦 Fiber & Micronutrients</h4>
+            <p>Fiber improves digestion, slows sugar absorption, and supports gut health. Micronutrients like magnesium, chromium, and vitamin D help in insulin function and glucose metabolism.</p>
+            <p><strong>Best Sources:</strong> Leafy greens, spinach, broccoli, carrots, beans, and citrus fruits like oranges and grapefruit.</p>
 
-        <h4>💪 Benefits of a Diabetic-Friendly Diet</h4>
-        <p>✅ Helps maintain steady blood sugar levels.<br> ✅ Improves heart health and lowers cholesterol.<br> ✅ Supports healthy weight management.<br> ✅ Boosts energy and improves digestion.<br> ✅ Reduces long-term complications like fatigue, neuropathy,
-            and high BP.</p>
+            <h4>🕒 Meal Timing & Portion Control</h4>
+            <p>Spacing meals evenly throughout the day helps prevent sugar fluctuations. Eat every 3-4 hours with a mix of carbs, protein, and fat.</p>
+            <p><strong>Sample Routine:</strong><br> 🕖 Breakfast: Oats with milk + fruits like apple or papaya.<br> 🕛 Lunch: Brown rice + dal + grilled chicken/fish + salad.<br> 🕒 Evening Snack: Handful of nuts or roasted chickpeas.<br> 🕖 Dinner: Multigrain
+                roti + vegetables + paneer/tofu curry.<br> 💤 Before Bed: Glass of warm milk (unsweetened).</p>
 
-        <h4>💡 Final Words</h4>
-        <p>A Diabetic-Friendly Diet isn't restrictive — it's a smarter way of eating. By choosing the right foods and controlling portions, you can enjoy delicious meals while keeping your sugar in check. Combine this diet with light exercise, regular sleep,
-            and hydration for long-term health and stability. Remember, small changes daily make a big difference. 🥗💚</p>
+            <h4>💧 Hydration & Beverages</h4>
+            <p>Stay hydrated with water, green tea, or buttermilk. Avoid fruit juices and soft drinks as they cause sugar spikes. Herbal teas like cinnamon or fenugreek are also beneficial for stabilizing glucose levels.</p>
+
+            <h4>🚫 Foods to Avoid</h4>
+            <p>❌ White bread, sweets, pastries, and sugary cereals.<br> ❌ Full-fat dairy, butter, and processed cheese in excess.<br> ❌ Fried foods, soft drinks, and alcohol.<br> ❌ High-sugar fruits like mangoes, grapes, and bananas.</p>
+
+            <div class="tips-grid">
+                <div class="tip-card">
+                    <img src="{% static 'Images\christopher-alvarenga-rQX9eVpSFz8-unsplash.jpg' %}" alt="Whole grains">
+                    <div>
+                        <h5>Choose Whole Grains</h5>
+                        <p>Switch to brown rice, quinoa, oats, and multigrain rotis for steady energy.</p>
+                    </div>
+                </div>
+                <div class="tip-card">
+                    <img src="{% static 'Images\image copy 9.png' %}" alt="Lean protein">
+                    <div>
+                        <h5>Prioritize Protein</h5>
+                        <p>Add eggs, fish, paneer, tofu, and lentils to keep you fuller for longer.</p>
+                    </div>
+                </div>
+                <div class="tip-card">
+                    <img src="{% static 'Images\image copy 10.png' %}" alt="Healthy fats">
+                    <div>
+                        <h5>Healthy Fats</h5>
+                        <p>Use nuts, seeds, and olive oil in moderation to support heart health.</p>
+                    </div>
+                </div>
+            </div>
+
+            <h4>💪 Benefits of a Diabetic-Friendly Diet</h4>
+            <p>✅ Helps maintain steady blood sugar levels.<br> ✅ Improves heart health and lowers cholesterol.<br> ✅ Supports healthy weight management.<br> ✅ Boosts energy and improves digestion.<br> ✅ Reduces long-term complications like fatigue, neuropathy,
+                and high BP.</p>
+
+            <h4>💡 Final Words</h4>
+            <p>A Diabetic-Friendly Diet isn't restrictive — it's a smarter way of eating. By choosing the right foods and controlling portions, you can enjoy delicious meals while keeping your sugar in check. Combine this diet with light exercise, regular sleep,
+                and hydration for long-term health and stability. Remember, small changes daily make a big difference. 🥗💚</p>
+        </div>
     </section>
 
+    <footer>
+        © {{ now|date:"Y" }} Diet Mandi • Evidence-based diet guidance for better health
+    </footer>
 
 </body>
-
 </html>
