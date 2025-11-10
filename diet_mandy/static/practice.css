@@ -276,7 +276,7 @@
         transform: translateY(-3px);
     }
     /* =========================
-   Responsive
+    Responsive
 ========================= */
     
     @media (max-width: 768px) {
@@ -473,7 +473,7 @@
         transform: translateY(-3px);
     }
     /* =========================
-   Footer
+    Footer
 ========================= */
     
     footer {

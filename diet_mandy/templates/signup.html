@@ -8,7 +8,7 @@
     <title>Diet Mandi | Sign Up</title>
     <link rel="stylesheet" href="{% static 'signup.css' %}">
     <script defer src="{% static 'js/signup.js' %}"></script>
-   
+
 </head>
 
 <body>
@@ -19,7 +19,7 @@
 
             
 {% comment %} <form action="{% url 'signup' %}" id="signupForm" method="POST"> {% endcomment %}
-   
+
 {% comment %} id="signupForm" {% endcomment %}
             <form action="{% url 'signup' %}"  method="POST">
                 {% csrf_token %}

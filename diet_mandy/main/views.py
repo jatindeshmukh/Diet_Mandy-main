@@ -30,27 +30,72 @@ def logout_view(request):
     return redirect('login')
 
 # Signup Page
+# def signup_page(request):
+#     if request.method == "POST":
+#         name = request.POST["fullname"]
+#         email = request.POST["email"]
+#         password = request.POST["password"]
+#         firstname, lastname, *extra = name.split(" ")
+
+#         new_user = User.objects.create(
+#             username=email,
+#             email=email,
+#             password=password,
+#             first_name=firstname,
+#             last_name=lastname
+#         )
+#         new_user.last_login = timezone.now()
+#         new_user.save()
+#         login(request, new_user)
+#         messages.success(request, "Account created successfully!")
+#         return redirect('index')
+
+#     return render(request, 'signup.html')
+
+from django.contrib.auth.models import User
+from django.contrib.auth import login
+from django.contrib import messages
+from django.shortcuts import render, redirect
+from django.utils import timezone
+
 def signup_page(request):
     if request.method == "POST":
         name = request.POST["fullname"]
         email = request.POST["email"]
         password = request.POST["password"]
-        firstname, lastname, *extra = name.split(" ")
 
-        new_user = User.objects.create(
+        # Split name safely
+        parts = name.split(" ", 1)
+        firstname = parts[0]
+        lastname = parts[1] if len(parts) > 1 else ""
+
+        # STEP 1: Check if user already exists
+        if User.objects.filter(username=email).exists():
+            messages.error(request, "Account already exists. Please log in.")
+            return redirect('login')
+
+        # STEP 2: Use create_user (this hashes password automatically)
+        new_user = User.objects.create_user(
             username=email,
             email=email,
             password=password,
             first_name=firstname,
             last_name=lastname
         )
+
+        # Optional: record login time
         new_user.last_login = timezone.now()
         new_user.save()
+
+        # Auto login after signup
         login(request, new_user)
         messages.success(request, "Account created successfully!")
         return redirect('index')
 
     return render(request, 'signup.html')
+
+
+
 
 
 # Pages

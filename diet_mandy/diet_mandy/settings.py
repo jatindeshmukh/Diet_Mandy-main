@@ -107,5 +107,5 @@ EMAIL_USE_TLS = True
 
 EMAIL_HOST_USER = "jatindeshmukh1186@gmail.com"
 EMAIL_HOST_PASSWORD = "ppfb jmqc liku aaer"  # Your Gmail App Password
-DEFAULT_FROM_EMAIL =EMAIL_HOST_USER
+DEFAULT_FROM_EMAIL = EMAIL_HOST_USER
 # ...existing code...
