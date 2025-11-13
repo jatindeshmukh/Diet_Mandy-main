@@ -165,6 +165,9 @@ Routine / Eating Habits:
 def inquiry_success(request):
     return render(request, "inquiry_success.html")
 
+def blog_1(request):
+    return render(request, "blog_1.html")
+
 # from django.shortcuts import render, redirect
 # from django.http import HttpResponse
 

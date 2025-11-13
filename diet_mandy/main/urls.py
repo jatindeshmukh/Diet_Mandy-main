@@ -16,4 +16,5 @@ urlpatterns = [
     path('Pcod_diet/', views.Pcod_diet , name='Pcod_diet'),
     path('inquiry/', views.inquiry, name='inquiry'),
     path('inquiry/success/', views.inquiry_success, name='inquiry-success'),
+    path('blog_1/', views.blog_1, name='blog_1'),
 ]
