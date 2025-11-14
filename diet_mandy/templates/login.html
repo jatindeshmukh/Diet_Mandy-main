@@ -5,22 +5,56 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Login | Diet Mandi</title>
+    <title>Diet Mandi | Login</title>
+
+    <!-- CSS File -->
     <link rel="stylesheet" href="{% static 'login.css' %}">
-    <script defer src="{% static 'js/login.js' %}"></script>
 </head>
 
 <body>
-    <div class="login-container">
-        <h2>Welcome Back!</h2>
-        <form action="{% url 'login' %}" method="POST">
-            {% csrf_token %}
-            <input type="email" name="email" id="email" placeholder="Email" required>
-            <input type="password" name="password" id="password" placeholder="Password" required>
-            <button type="submit">Login</button>
-            <p>Don't have an account? <a href="{% url 'signup' %}">Create account</a></p>
-        </form>
+    <div class="outer-container">
+        <div class="login-card">
+
+            <h1 class="title"><span>Join Diet Mandi</span></h1>
+
+            <form action="{% url 'login' %}" method="POST">
+                {% csrf_token %}
+
+                <div class="input-group">
+                    <label>Email Address</label>
+                    <input type="email" name="email" placeholder="Enter your email" required>
+                </div>
+
+                <div class="input-group password-wrap">
+                    <label>Password</label>
+                    <input type="password" name="password" id="password" placeholder="Enter password" required>
+                    <span class="toggle" onclick="togglePass()">Show</span>
+                </div>
+
+                <button type="submit" class="btn">Login</button>
+
+                <p class="login-link">Don't have an account?
+                    <a href="{% url 'signup' %}">Sign up here</a>
+                </p>
+
+            </form>
+        </div>
     </div>
+
+    <script>
+        function togglePass() {
+            const p = document.getElementById("password");
+            const t = document.querySelector(".toggle");
+            if (p.type === "password") {
+                p.type = "text";
+                t.innerText = "Hide";
+            } else {
+                p.type = "password";
+                t.innerText = "Show";
+            }
+        }
+    </script>
+
 </body>
 
 </html>

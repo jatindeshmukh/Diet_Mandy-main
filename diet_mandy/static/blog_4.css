@@ -1,0 +1,239 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    background-color: #f8fdf8;
+    color: #333;
+    line-height: 1.6;
+}
+
+.container {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 30px 20px;
+}
+
+header {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+h1 {
+    font-size: 2.5rem;
+    color: #2e7d32;
+    margin-bottom: 15px;
+    font-weight: 700;
+}
+
+.intro-text {
+    font-size: 1.2rem;
+    color: #555;
+    max-width: 700px;
+    margin: 0 auto;
+    line-height: 1.7;
+    font-weight: 500;
+}
+
+.protein-list {
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+}
+
+.protein-card {
+    background: white;
+    border-radius: 12px;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    overflow: hidden;
+    border: 1px solid #e8f5e9;
+}
+
+.protein-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+}
+
+.card-content {
+    padding: 25px;
+}
+
+.card-content h2 {
+    color: #2e7d32;
+    font-size: 1.6rem;
+    margin-bottom: 10px;
+    font-weight: 600;
+}
+
+.protein-tag {
+    display: inline-block;
+    background: #e8f5e9;
+    color: #2e7d32;
+    padding: 6px 15px;
+    border-radius: 20px;
+    font-size: 0.9rem;
+    font-weight: 600;
+    margin-bottom: 15px;
+    border: 1px solid #c8e6c9;
+}
+
+.description {
+    color: #555;
+    font-size: 1.05rem;
+    line-height: 1.7;
+    margin-bottom: 20px;
+}
+
+.food-items {
+    background: #f1f8e9;
+    padding: 20px;
+    border-radius: 8px;
+    margin: 20px 0;
+}
+
+.food-category h3 {
+    color: #2e7d32;
+    margin-bottom: 15px;
+    font-size: 1.1rem;
+}
+
+.items {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.food-item {
+    background: #e8f5e9;
+    color: #2e7d32;
+    padding: 8px 16px;
+    border-radius: 20px;
+    font-size: 0.9rem;
+    font-weight: 500;
+    border: 1px solid #c8e6c9;
+    transition: all 0.3s ease;
+}
+
+.food-item:hover {
+    background: #2e7d32;
+    color: white;
+    transform: translateY(-2px);
+}
+
+.nutrition-info {
+    display: flex;
+    justify-content: space-around;
+    background: #f9f9f9;
+    padding: 15px;
+    border-radius: 8px;
+    margin-top: 15px;
+}
+
+.nutrition-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.value {
+    font-size: 1.3rem;
+    font-weight: 700;
+    color: #2e7d32;
+}
+
+.label {
+    font-size: 0.85rem;
+    color: #666;
+    margin-top: 5px;
+}
+
+.tips-section {
+    margin-top: 50px;
+    padding: 30px;
+    background: white;
+    border-radius: 12px;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
+}
+
+.tips-section h2 {
+    text-align: center;
+    color: #2e7d32;
+    margin-bottom: 30px;
+    font-size: 1.8rem;
+}
+
+.tips-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 25px;
+}
+
+.tip-item {
+    background: #f1f8e9;
+    padding: 25px;
+    border-radius: 8px;
+    border-left: 4px solid #4caf50;
+}
+
+.tip-item h3 {
+    color: #2e7d32;
+    margin-bottom: 12px;
+    font-size: 1.2rem;
+}
+
+.tip-item p {
+    color: #555;
+    line-height: 1.6;
+}
+
+footer {
+    text-align: center;
+    margin-top: 50px;
+    padding-top: 20px;
+    border-top: 1px solid #e0e0e0;
+    color: #666;
+    font-style: italic;
+}
+
+@media (max-width: 768px) {
+    .container {
+        padding: 20px 15px;
+    }
+    h1 {
+        font-size: 2rem;
+    }
+    .card-content {
+        padding: 20px;
+    }
+    .card-content h2 {
+        font-size: 1.4rem;
+    }
+    .description {
+        font-size: 1rem;
+    }
+    .food-items {
+        padding: 15px;
+    }
+    .items {
+        gap: 8px;
+    }
+    .food-item {
+        padding: 6px 12px;
+        font-size: 0.85rem;
+    }
+    .nutrition-info {
+        flex-direction: column;
+        gap: 15px;
+    }
+    .tips-grid {
+        grid-template-columns: 1fr;
+    }
+    .tips-section {
+        padding: 20px;
+    }
+}

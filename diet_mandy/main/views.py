@@ -11,16 +11,20 @@ def index(request):
     return render(request, 'index.html')
 
 # Login Page
+from django.contrib.auth import authenticate, login
+
 def login_page(request):
     if request.method == "POST":
         email = request.POST.get("email")
         password = request.POST.get("password")
 
-        user = User.objects.filter(email=email).first()
-        if user and password == user.password:  # ⚠ Simplified auth (not secure)
+        user = authenticate(request, username=email, password=password)
+        
+        if user is not None:
             login(request, user)
             return redirect('index')
-        return redirect('login')
+        else:
+            return redirect('login')
 
     return render(request, 'login.html')
 
@@ -29,28 +33,8 @@ def logout_view(request):
     logout(request)
     return redirect('login')
 
+
 # Signup Page
-# def signup_page(request):
-#     if request.method == "POST":
-#         name = request.POST["fullname"]
-#         email = request.POST["email"]
-#         password = request.POST["password"]
-#         firstname, lastname, *extra = name.split(" ")
-
-#         new_user = User.objects.create(
-#             username=email,
-#             email=email,
-#             password=password,
-#             first_name=firstname,
-#             last_name=lastname
-#         )
-#         new_user.last_login = timezone.now()
-#         new_user.save()
-#         login(request, new_user)
-#         messages.success(request, "Account created successfully!")
-#         return redirect('index')
-
-#     return render(request, 'signup.html')
 
 from django.contrib.auth.models import User
 from django.contrib.auth import login
@@ -96,8 +80,6 @@ def signup_page(request):
 
 
 
-
-
 # Pages
 @login_required
 def calculator(request):
@@ -120,6 +102,33 @@ def muscle_gain_diet(request):
 
 def Pcod_diet(request):
     return render(request, 'Pcod_diet.html')
+
+def inquiry_success(request):
+    return render(request, "inquiry_success.html")
+
+def blog_1(request):
+    return render(request, "blog_1.html")
+
+def blog_2(request):
+    return render(request, "blog_2.html")
+
+def blog_3(request):
+    return render(request, "blog_3.html")
+
+def blog_4(request):
+    return render(request, "blog_4.html")
+
+def blog_5(request):
+    return render(request, "blog_5.html")
+
+def blog_6(request):
+    return render(request, "blog_6.html")
+
+def blog_7(request):
+    return render(request, "blog_7.html")  
+
+def blog_8(request):
+    return render(request, "blog_8.html")
 
 
 #  Inquiry Form (Save + Send Mail)
@@ -160,35 +169,3 @@ Routine / Eating Habits:
 
     return render(request, "inquiry_form.html")
 
-
-# ✅ Success Page
-def inquiry_success(request):
-    return render(request, "inquiry_success.html")
-
-def blog_1(request):
-    return render(request, "blog_1.html")
-
-# from django.shortcuts import render, redirect
-# from django.http import HttpResponse
-
-# def save_profile(request):
-#     if request.method == "POST":
-#         fullname = request.POST.get("fullname")
-#         contact = request.POST.get("contact")
-#         email = request.POST.get("email")
-#         password = request.POST.get("password")
-#         confirm_password = request.POST.get("confirmPassword")
-#         age = request.POST.get("age")
-#         gender = request.POST.get("gender")
-#         height = request.POST.get("height")
-#         goal = request.POST.get("goal")
-#         dietType = request.POST.get("dietType")
-#         allergies = request.POST.get("allergies")
-
-        # 👇 yaha aap database save kar sakte ho
-        # Example:
-        # UserProfile.objects.create(...)
-
-    #     return HttpResponse(" Profile Saved Successfully!")
-
-    # return HttpResponse("Invalid Request")

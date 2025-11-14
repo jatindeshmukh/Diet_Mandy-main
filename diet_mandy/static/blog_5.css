@@ -1,0 +1,345 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    background-color: #f8fdf8;
+    color: #333;
+    line-height: 1.6;
+}
+
+.container {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 30px 20px;
+}
+
+header {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+h1 {
+    font-size: 2.5rem;
+    color: #2e7d32;
+    margin-bottom: 15px;
+    font-weight: 700;
+}
+
+.intro-text {
+    font-size: 1.2rem;
+    color: #555;
+    max-width: 700px;
+    margin: 0 auto;
+    line-height: 1.7;
+    font-weight: 500;
+}
+
+.portion-list {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+.portion-card {
+    background: white;
+    border-radius: 12px;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    overflow: hidden;
+    border: 1px solid #e8f5e9;
+}
+
+.portion-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+}
+
+.card-content {
+    padding: 25px;
+}
+
+.card-content h2 {
+    color: #2e7d32;
+    font-size: 1.6rem;
+    margin-bottom: 10px;
+    font-weight: 600;
+}
+
+.portion-tag {
+    display: inline-block;
+    background: #e8f5e9;
+    color: #2e7d32;
+    padding: 6px 15px;
+    border-radius: 20px;
+    font-size: 0.9rem;
+    font-weight: 600;
+    margin-bottom: 15px;
+    border: 1px solid #c8e6c9;
+}
+
+.description {
+    color: #555;
+    font-size: 1.05rem;
+    line-height: 1.7;
+    margin-bottom: 20px;
+}
+
+.food-examples {
+    background: #f1f8e9;
+    padding: 20px;
+    border-radius: 8px;
+    margin-top: 20px;
+}
+
+.example-category {
+    margin-bottom: 15px;
+}
+
+.example-category h3 {
+    color: #2e7d32;
+    margin-bottom: 5px;
+    font-size: 1.1rem;
+}
+
+.example-category p {
+    color: #555;
+    font-size: 0.95rem;
+}
+
+
+/* Plate Comparison */
+
+.plate-comparison {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 30px;
+    margin: 25px 0;
+    text-align: center;
+}
+
+.plate-size p {
+    margin-top: 10px;
+    color: #666;
+    font-size: 0.9rem;
+}
+
+.plate {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-weight: 600;
+}
+
+.small-plate {
+    background: #4caf50;
+    border: 3px solid #2e7d32;
+}
+
+.large-plate {
+    background: #f44336;
+    border: 3px solid #c62828;
+}
+
+.benefits {
+    background: #f1f8e9;
+    padding: 20px;
+    border-radius: 8px;
+    margin-top: 20px;
+}
+
+.benefits h3 {
+    color: #2e7d32;
+    margin-bottom: 15px;
+}
+
+.benefits ul {
+    list-style-type: none;
+    padding-left: 0;
+}
+
+.benefits li {
+    padding: 8px 0;
+    padding-left: 25px;
+    position: relative;
+    color: #555;
+}
+
+.benefits li:before {
+    content: "✓";
+    position: absolute;
+    left: 0;
+    color: #4caf50;
+    font-weight: bold;
+}
+
+
+/* Mindful Tips */
+
+.mindful-tips {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+    margin: 25px 0;
+}
+
+.tip {
+    background: #f1f8e9;
+    padding: 20px;
+    border-radius: 8px;
+    border-left: 4px solid #4caf50;
+}
+
+.tip h3 {
+    color: #2e7d32;
+    margin-bottom: 10px;
+    font-size: 1.1rem;
+}
+
+.tip p {
+    color: #555;
+    font-size: 0.95rem;
+    line-height: 1.6;
+}
+
+.practice-tips {
+    background: #f1f8e9;
+    padding: 20px;
+    border-radius: 8px;
+    margin-top: 20px;
+}
+
+.practice-tips h3 {
+    color: #2e7d32;
+    margin-bottom: 15px;
+}
+
+.practice-tips ul {
+    list-style-type: none;
+    padding-left: 0;
+}
+
+.practice-tips li {
+    padding: 8px 0;
+    padding-left: 25px;
+    position: relative;
+    color: #555;
+}
+
+.practice-tips li:before {
+    content: "•";
+    position: absolute;
+    left: 10px;
+    color: #4caf50;
+    font-weight: bold;
+}
+
+
+/* Hand Guide */
+
+.hand-guide {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+    margin: 25px 0;
+}
+
+.hand-measurement {
+    background: #f1f8e9;
+    padding: 20px;
+    border-radius: 8px;
+}
+
+.measurement-info h4 {
+    color: #2e7d32;
+    margin-bottom: 8px;
+    font-size: 1.1rem;
+}
+
+.measurement-info p {
+    color: #555;
+    font-size: 0.95rem;
+}
+
+
+/* Additional Tips */
+
+.additional-tips {
+    margin-top: 50px;
+    padding: 30px;
+    background: white;
+    border-radius: 12px;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
+}
+
+.additional-tips h2 {
+    text-align: center;
+    color: #2e7d32;
+    margin-bottom: 30px;
+    font-size: 1.8rem;
+}
+
+.tips-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 25px;
+}
+
+.strategy {
+    background: #f1f8e9;
+    padding: 25px;
+    border-radius: 8px;
+    border-left: 4px solid #4caf50;
+}
+
+.strategy h3 {
+    color: #2e7d32;
+    margin-bottom: 12px;
+    font-size: 1.2rem;
+}
+
+.strategy p {
+    color: #555;
+    line-height: 1.6;
+}
+
+footer {
+    text-align: center;
+    margin-top: 50px;
+    padding-top: 20px;
+    border-top: 1px solid #e0e0e0;
+    color: #666;
+    font-style: italic;
+}
+
+@media (max-width: 768px) {
+    .container {
+        padding: 20px 15px;
+    }
+    h1 {
+        font-size: 2rem;
+    }
+    .card-content {
+        padding: 20px;
+    }
+    .plate-comparison,
+    .mindful-tips,
+    .hand-guide {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+    .tips-grid {
+        grid-template-columns: 1fr;
+    }
+    .additional-tips {
+        padding: 20px;
+    }
+}

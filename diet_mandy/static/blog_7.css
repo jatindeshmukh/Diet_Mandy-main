@@ -1,0 +1,160 @@
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+    
+    body {
+        background-color: #f8fdf8;
+        color: #333;
+        line-height: 1.7;
+    }
+    
+    .container {
+        max-width: 900px;
+        margin: 0 auto;
+        padding: 30px 20px;
+    }
+    
+    header {
+        text-align: center;
+        margin-bottom: 40px;
+        border-bottom: 2px solid #e8f5e9;
+        padding-bottom: 30px;
+    }
+    
+    h1 {
+        font-size: 2.5rem;
+        color: #2e7d32;
+        margin-bottom: 15px;
+        font-weight: 700;
+    }
+    
+    .intro-text {
+        font-size: 1.2rem;
+        color: #555;
+        max-width: 700px;
+        margin: 0 auto;
+        line-height: 1.7;
+        font-weight: 500;
+    }
+    
+    .theory-content {
+        background: white;
+        border-radius: 12px;
+        padding: 40px;
+        box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
+        margin-bottom: 40px;
+    }
+    
+    .theory-section {
+        margin-bottom: 40px;
+    }
+    
+    .theory-section h2 {
+        color: #2e7d32;
+        font-size: 1.8rem;
+        margin-bottom: 20px;
+        font-weight: 600;
+        padding-left: 15px;
+    }
+    
+    .theory-section p {
+        color: #555;
+        font-size: 1.1rem;
+        line-height: 1.8;
+        margin-bottom: 20px;
+        text-align: justify;
+    }
+    
+    .mechanism-theory,
+    .solution-theory {
+        background: #f8fdf8;
+        padding: 25px;
+        border-radius: 8px;
+        margin: 25px 0;
+    }
+    
+    .mechanism-theory h3,
+    .solution-theory h3 {
+        font-size: 1.4rem;
+        margin-bottom: 15px;
+        font-weight: 600;
+    }
+    
+    .mechanism-theory p,
+    .solution-theory p {
+        color: #555;
+        font-size: 1.05rem;
+        line-height: 1.8;
+        margin-bottom: 15px;
+    }
+    
+    .key-principles {
+        background: white;
+        border-radius: 12px;
+        padding: 40px;
+        box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
+        margin-bottom: 40px;
+    }
+    
+    footer {
+        text-align: center;
+        margin-top: 50px;
+        padding-top: 20px;
+        border-top: 1px solid #e0e0e0;
+        color: #666;
+        font-style: italic;
+        font-size: 1.1rem;
+    }
+    /* Responsive Design */
+    
+    @media (max-width: 768px) {
+        .container {
+            padding: 20px 15px;
+        }
+        h1 {
+            font-size: 2rem;
+        }
+        .theory-content,
+        .key-principles {
+            padding: 25px 20px;
+        }
+        .theory-section h2 {
+            font-size: 1.5rem;
+        }
+        .mechanism-theory,
+        .solution-theory {
+            padding: 20px;
+        }
+        .mechanism-theory h3,
+        .solution-theory h3 {
+            font-size: 1.2rem;
+        }
+        .principles-grid {
+            grid-template-columns: 1fr;
+        }
+        .theory-section p,
+        .mechanism-theory p,
+        .solution-theory p {
+            font-size: 1rem;
+            text-align: left;
+        }
+    }
+    
+    @media (max-width: 480px) {
+        .container {
+            padding: 15px 10px;
+        }
+        h1 {
+            font-size: 1.8rem;
+        }
+        .theory-content,
+        .key-principles {
+            padding: 20px 15px;
+        }
+        .intro-text {
+            font-size: 1.1rem;
+        }
+    }

@@ -17,4 +17,11 @@ urlpatterns = [
     path('inquiry/', views.inquiry, name='inquiry'),
     path('inquiry/success/', views.inquiry_success, name='inquiry-success'),
     path('blog_1/', views.blog_1, name='blog_1'),
+    path('blog_2/', views.blog_2, name='blog_2'),
+    path('blog_3/', views.blog_3, name='blog_3'),
+    path('blog_4/', views.blog_4, name='blog_4'),
+    path('blog_5/', views.blog_5, name='blog_5'),
+    path('blog_6/', views.blog_6, name='blog_6'),
+    path('blog_7/', views.blog_7, name='blog_7'),
+    path('blog_8/', views.blog_8, name='blog_8'),
 ]

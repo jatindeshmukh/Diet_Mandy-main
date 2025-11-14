@@ -11,8 +11,9 @@
 </head>
 
 <body>
+    
 
-<!-- ✅ Navbar -->
+<!--  Navbar -->
 <nav>
     <div class="logo">🥗 Diet Mandi</div>
     <ul>
@@ -22,7 +23,7 @@
         <li><a href="{% url 'blogs' %}">Blog </a></li>
         <li><a href="{% url 'inquiry' %}">Inquiry</a></li>
         
-        <!-- ✅ Your Django Login / Signup -->
+        <!--  Your Django Login / Signup -->
         {% if user.is_authenticated %}
             <li><a href="{% url 'logout' %}">Logout</a></li>
         {% else %}
@@ -32,7 +33,7 @@
     </ul>
 </nav>
 
-<!-- ✅ Hero Section -->
+<!--  Hero Section -->
 <section id="home" class="hero">
     <div class="hero-content">
         <h2>Transform Your Health</h2>
@@ -55,7 +56,7 @@
 </section>
 
 
-<!-- ✅ Why We’re Different -->
+<!--  Why We’re Different -->
 <section id="why-different" class="why-section">
     <h2>Why We're Different</h2>
 
@@ -87,7 +88,7 @@
     </div>
 </section>
 
-<!-- ✅ Diet Topics -->
+<!--  Diet Topics -->
 <section id="diets">
     <h2>Health Analysis</h2>
     <div class="card-container">
@@ -153,7 +154,7 @@
 </section>
 
 
-<!-- ✅ Success Stories -->
+<!--  Success Stories -->
 
     
     <p class="success-subtitle">
@@ -196,7 +197,7 @@
 
 
 
-<!-- ✅ Exciting Call-to-Action Section -->
+<!--  Exciting Call-to-Action Section -->
 <section class="cta-calculator">
     <h2>Ready to Discover Your Perfect Diet Plan?</h2>
     <p>
@@ -211,7 +212,7 @@
     <p class="mini-note">Takes less than 2 minutes ⏳ — No guesswork, just science!</p>
 </section>
 
-<!-- ✅ Footer -->
+<!--  Footer -->
 <footer>
     © 2025 Diet Mandi — Eat Healthy, Live Better 
 </footer>

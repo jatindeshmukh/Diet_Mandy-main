@@ -1,0 +1,221 @@
+
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Balanced Diet vs Trendy Diets</title>
+    <link rel="stylesheet" href="{% static 'blog_3.css' %}">
+</head>
+
+<body>
+    <div class="container">
+        <header>
+            <h1>Balanced Diet vs Trendy Diets</h1>
+            <p class="intro-text">Crash diets give quick results but harm your metabolism. A balanced diet fuels your body sustainably for long-term health and wellness.</p>
+        </header>
+
+        <main>
+            <div class="diet-list">
+                <!-- Protein -->
+                <div class="diet-card">
+                    <div class="card-content">
+                        <h2>Protein - The Building Blocks</h2>
+                        <div class="importance-tag">Essential for Growth & Repair</div>
+                        <p class="description">
+                            Proteins are fundamental components of every cell in your body. They help build and repair tissues, make enzymes and hormones, and are essential for building bones, muscles, cartilage, skin, and blood.
+                        </p>
+                        <div class="food-items">
+                            <div class="food-category">
+                                <h3>Excellent Sources:</h3>
+                                <div class="items">
+                                    <span class="food-item">Dal & Legumes</span>
+                                    <span class="food-item">Eggs</span>
+                                    <span class="food-item">Paneer</span>
+                                    <span class="food-item">Chicken</span>
+                                    <span class="food-item">Fish</span>
+                                    <span class="food-item">Soy Products</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="health-benefits">
+                            <h4>Health Benefits:</h4>
+                            <ul>
+                                <li>Muscle growth and maintenance</li>
+                                <li>Stronger immune system</li>
+                                <li>Better satiety and weight management</li>
+                                <li>Healthy hair and skin</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Good Carbs -->
+                <div class="diet-card">
+                    <div class="card-content">
+                        <h2>Good Carbohydrates - Energy Source</h2>
+                        <div class="importance-tag">Sustained Energy Release</div>
+                        <p class="description">
+                            Complex carbohydrates provide steady energy throughout the day without blood sugar spikes. They are rich in fiber, which aids digestion and helps maintain healthy cholesterol levels.
+                        </p>
+                        <div class="food-items">
+                            <div class="food-category">
+                                <h3>Recommended Sources:</h3>
+                                <div class="items">
+                                    <span class="food-item">Millets</span>
+                                    <span class="food-item">Brown Rice</span>
+                                    <span class="food-item">Whole Wheat Roti</span>
+                                    <span class="food-item">Oats</span>
+                                    <span class="food-item">Quinoa</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="health-benefits">
+                            <h4>Health Benefits:</h4>
+                            <ul>
+                                <li>Steady energy throughout the day</li>
+                                <li>Improved digestive health</li>
+                                <li>Better blood sugar control</li>
+                                <li>Reduced risk of chronic diseases</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Healthy Fats -->
+                <div class="diet-card">
+                    <div class="card-content">
+                        <h2>Healthy Fats - Essential Nutrients</h2>
+                        <div class="importance-tag">Brain & Hormone Health</div>
+                        <p class="description">
+                            Healthy fats are crucial for brain function, hormone production, and absorption of fat-soluble vitamins. They provide long-lasting energy and help maintain healthy cells.
+                        </p>
+                        <div class="food-items">
+                            <div class="food-category">
+                                <h3>Quality Sources:</h3>
+                                <div class="items">
+                                    <span class="food-item">Ghee</span>
+                                    <span class="food-item">Nuts & Seeds</span>
+                                    <span class="food-item">Avocado</span>
+                                    <span class="food-item">Olive Oil</span>
+                                    <span class="food-item">Coconut</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="health-benefits">
+                            <h4>Health Benefits:</h4>
+                            <ul>
+                                <li>Improved brain function and memory</li>
+                                <li>Better hormone balance</li>
+                                <li>Healthy skin and hair</li>
+                                <li>Reduced inflammation</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Fruits & Vegetables -->
+                <div class="diet-card">
+                    <div class="card-content">
+                        <h2>Fruits & Vegetables - Nature's Medicine</h2>
+                        <div class="importance-tag">Vitamin & Mineral Powerhouse</div>
+                        <p class="description">
+                            Packed with vitamins, minerals, antioxidants, and fiber, fruits and vegetables are essential for preventing diseases, boosting immunity, and maintaining optimal health.
+                        </p>
+                        <div class="food-items">
+                            <div class="food-category">
+                                <h3>Include Variety:</h3>
+                                <div class="items">
+                                    <span class="food-item">Leafy Greens</span>
+                                    <span class="food-item">Seasonal Fruits</span>
+                                    <span class="food-item">Colorful Vegetables</span>
+                                    <span class="food-item">Berries</span>
+                                    <span class="food-item">Citrus Fruits</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="health-benefits">
+                            <h4>Health Benefits:</h4>
+                            <ul>
+                                <li>Strong immune system</li>
+                                <li>Reduced disease risk</li>
+                                <li>Better digestion</li>
+                                <li>Healthy skin and eyes</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Water -->
+                <div class="diet-card">
+                    <div class="card-content">
+                        <h2>Water - The Essence of Life</h2>
+                        <div class="importance-tag">Fundamental for All Body Functions</div>
+                        <p class="description">
+                            Water is involved in every bodily function - from regulating temperature and transporting nutrients to flushing out toxins and lubricating joints. Proper hydration is non-negotiable for good health.
+                        </p>
+                        <div class="food-items">
+                            <div class="food-category">
+                                <h3>Hydration Sources:</h3>
+                                <div class="items">
+                                    <span class="food-item">Pure Water</span>
+                                    <span class="food-item">Herbal Teas</span>
+                                    <span class="food-item">Coconut Water</span>
+                                    <span class="food-item">Water-rich Fruits</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="health-benefits">
+                            <h4>Health Benefits:</h4>
+                            <ul>
+                                <li>Optimal organ function</li>
+                                <li>Improved energy levels</li>
+                                <li>Better skin health</li>
+                                <li>Enhanced digestion</li>
+                                <li>Natural detoxification</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="comparison-section">
+                <h2>Why Balanced Diet Wins Over Trendy Diets</h2>
+                <div class="comparison-grid">
+                    <div class="pros-cons">
+                        <div class="pros">
+                            <h3> Balanced Diet Benefits</h3>
+                            <ul>
+                                <li>Sustainable long-term results</li>
+                                <li>No nutrient deficiencies</li>
+                                <li>Healthy metabolism</li>
+                                <li>Improved energy levels</li>
+                                <li>Better mental health</li>
+                                <li>Flexible and enjoyable</li>
+                            </ul>
+                        </div>
+                        <div class="cons">
+                            <h3> Trendy Diet Risks</h3>
+                            <ul>
+                                <li>Yo-yo weight effect</li>
+                                <li>Nutrient deficiencies</li>
+                                <li>Slowed metabolism</li>
+                                <li>Fatigue and weakness</li>
+                                <li>Food obsession</li>
+                                <li>Unsustainable long-term</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+
+        <footer>
+            <p>Remember: Sustainable nutrition always beats quick fixes. Nourish your body, don't punish it.</p>
+        </footer>
+    </div>
+</body>
+
+</html>
