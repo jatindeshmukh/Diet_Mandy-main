@@ -1,604 +1,645 @@
-    /* =========================
+            /* =========================
     Global Styling
 ========================= */
-    
-    * {
-        margin: 0;
-        padding: 0;
-        box-sizing: border-box;
-        font-family: "Poppins", sans-serif;
-    }
-    
-    body {
-        scroll-behavior: smooth;
-        background: #f5fff5;
-        color: #222;
-    }
-    /* =========================
+            
+            * {
+                margin: 0;
+                padding: 0;
+                box-sizing: border-box;
+                font-family: "Poppins", sans-serif;
+            }
+            
+            body {
+                scroll-behavior: smooth;
+                background: #f5fff5;
+                color: #222;
+            }
+            /* =========================
     Navbar
 ========================= */
-    
-    nav {
-        position: fixed;
-        top: 0;
-        width: 100%;
-        background: #fff;
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        padding: 14px 40px;
-        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
-        z-index: 999;
-    }
-    
-    nav .logo {
-        font-size: 22px;
-        font-weight: 700;
-    }
-    
-    nav ul {
-        list-style: none;
-        display: flex;
-        gap: 20px;
-    }
-    
-    nav ul li a {
-        text-decoration: none;
-        color: #222;
-        padding: 8px 14px;
-        border-radius: 8px;
-        transition: 0.3s ease;
-    }
-    
-    nav ul li a:hover,
-    nav ul li a.active {
-        background: #2ecc71;
-        color: #fff;
-    }
-    
-    .cta {
-        background: #27ae60 !important;
-        color: #fff !important;
-        border-radius: 6px;
-        padding: 4px 12px;
-    }
-    /* =========================
+            
+            nav {
+                position: fixed;
+                top: 0;
+                width: 100%;
+                background: #fff;
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                padding: 14px 40px;
+                box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+                z-index: 999;
+            }
+            
+            nav .logo {
+                font-size: 22px;
+                font-weight: 700;
+            }
+            
+            nav ul {
+                list-style: none;
+                display: flex;
+                gap: 20px;
+            }
+            
+            nav ul li a {
+                text-decoration: none;
+                color: #222;
+                padding: 8px 14px;
+                border-radius: 8px;
+                transition: 0.3s ease;
+            }
+            
+            nav ul li a:hover,
+            nav ul li a.active {
+                background: #2ecc71;
+                color: #fff;
+            }
+            
+            .cta {
+                background: #27ae60 !important;
+                color: #fff !important;
+                border-radius: 6px;
+                padding: 4px 12px;
+            }
+            /* =========================
    Hero Section
 ========================= */
-    /* HERO SECTION */
-    
-    .hero {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        padding: 110px 60px;
-        background: linear-gradient(to right, #edfff1, #f7fff9);
-    }
-    /* Left Text Section */
-    
-    .hero-content {
-        max-width: 48%;
-        animation: fadeInLeft 1s ease forwards;
-    }
-    
-    .hero h2 {
-        font-size: 52px;
-        font-weight: 700;
-        margin-bottom: 18px;
-        line-height: 1.2;
-        color: #1c1c1c;
-    }
-    
-    .hero p {
-        font-size: 19px;
-        margin-bottom: 25px;
-        color: #444;
-    }
-    /* Bullet Points */
-    
-    .hero-list {
-        margin-bottom: 35px;
-        padding-left: 0;
-        list-style: none;
-    }
-    
-    .hero-list li {
-        font-size: 18px;
-        margin-bottom: 10px;
-        display: flex;
-        align-items: center;
-        gap: 8px;
-    }
-    /* CTA Button */
-    
-    .cta {
-        padding: 12px 28px;
-        font-size: 18px;
-        border-radius: 30px;
-        border: none;
-        background: #2ecc71;
-        color: white;
-        cursor: pointer;
-        transition: 0.3s ease;
-    }
-    
-    .cta:hover {
-        background: #27ae60;
-        transform: translateY(-2px);
-    }
-    /* Hero Image Styles */
-    
-    .hero img {
-        width: 46%;
-        border-radius: 20px;
-        object-fit: cover;
-        box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.15);
-        transition: transform 0.5s ease;
-    }
-    
-    .hero img:hover {
-        transform: scale(1.04);
-    }
-    /* Subtle Animation */
-    
-    @keyframes fadeInLeft {
-        from {
-            opacity: 0;
-            transform: translateX(-40px);
-        }
-        to {
-            opacity: 1;
-            transform: translateX(0);
-        }
-    }
-    /* =========================
+            /* HERO SECTION */
+            
+            .hero {
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                padding: 110px 60px;
+                background: linear-gradient(to right, #edfff1, #f7fff9);
+            }
+            /* Left Text Section */
+            
+            .hero-content {
+                max-width: 48%;
+                animation: fadeInLeft 1s ease forwards;
+            }
+            
+            .hero h2 {
+                font-size: 52px;
+                font-weight: 700;
+                margin-bottom: 18px;
+                line-height: 1.2;
+                color: #1c1c1c;
+            }
+            
+            .hero p {
+                font-size: 19px;
+                margin-bottom: 25px;
+                color: #444;
+            }
+            /* Bullet Points */
+            
+            .hero-list {
+                margin-bottom: 35px;
+                padding-left: 0;
+                list-style: none;
+            }
+            
+            .hero-list li {
+                font-size: 18px;
+                margin-bottom: 10px;
+                display: flex;
+                align-items: center;
+                gap: 8px;
+            }
+            /* CTA Button */
+            
+            .cta {
+                padding: 12px 28px;
+                font-size: 18px;
+                border-radius: 30px;
+                border: none;
+                background: #2ecc71;
+                color: white;
+                cursor: pointer;
+                transition: 0.3s ease;
+            }
+            
+            .cta:hover {
+                background: #27ae60;
+                transform: translateY(-2px);
+            }
+            /* Hero Image Styles */
+            
+            .hero img {
+                width: 46%;
+                border-radius: 20px;
+                object-fit: cover;
+                box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.15);
+                transition: transform 0.5s ease;
+            }
+            
+            .hero img:hover {
+                transform: scale(1.04);
+            }
+            /* Subtle Animation */
+            
+            @keyframes fadeInLeft {
+                from {
+                    opacity: 0;
+                    transform: translateX(-40px);
+                }
+                to {
+                    opacity: 1;
+                    transform: translateX(0);
+                }
+            }
+            /* =========================
     Sections
 ========================= */
-    
-    section {
-        padding: 80px 40px;
-    }
-    
-    h2 {
-        text-align: center;
-        margin-bottom: 30px;
-        font-size: 32px;
-        font-weight: 700;
-    }
-    /* =========================
+            
+            section {
+                padding: 80px 40px;
+            }
+            
+            h2 {
+                text-align: center;
+                margin-bottom: 30px;
+                font-size: 32px;
+                font-weight: 700;
+            }
+            /* =========================
    Cards
 ========================= */
-    
-    .card-container {
-        display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
-        gap: 20px;
-        padding: 20px 0;
-    }
-    
-    .card img {
-        width: 100%;
-        height: 180px;
-        object-fit: cover;
-        border-radius: 10px;
-        margin-bottom: 10px;
-    }
-    
-    .card {
-        background: white;
-        padding: 25px;
-        border-radius: 12px;
-        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-        transition: 0.4s;
-        cursor: pointer;
-        text-align: center;
-    }
-    
-    .card:hover {
-        transform: translateY(-5px);
-        background: #e8ffe8;
-    }
-    /* =========================
+            
+            .card-container {
+                display: grid;
+                grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+                gap: 20px;
+                padding: 20px 0;
+            }
+            
+            .card img {
+                width: 100%;
+                height: 180px;
+                object-fit: cover;
+                border-radius: 10px;
+                margin-bottom: 10px;
+            }
+            
+            .card {
+                background: white;
+                padding: 25px;
+                border-radius: 12px;
+                box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+                transition: 0.4s;
+                cursor: pointer;
+                text-align: center;
+            }
+            
+            .card:hover {
+                transform: translateY(-5px);
+                background: #e8ffe8;
+            }
+            /* =========================
    Calculator Section
 ========================= */
-    
-    .container {
-        max-width: 700px;
-        margin: auto;
-        padding: 20px;
-    }
-    
-    .tabs {
-        display: flex;
-        justify-content: center;
-        gap: 10px;
-        margin-bottom: 25px;
-    }
-    
-    .tab-btn {
-        padding: 10px 20px;
-        border: none;
-        background: #ddd;
-        cursor: pointer;
-        border-radius: 6px;
-        font-size: 15px;
-    }
-    
-    .tab-btn.active {
-        background: #27ae60;
-        color: #fff;
-    }
-    
-    .box {
-        display: none;
-        background: white;
-        padding: 25px;
-        border-radius: 10px;
-        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-    }
-    
-    .box.active {
-        display: block;
-    }
-    
-    .box input,
-    .box select,
-    .box button {
-        width: 100%;
-        padding: 10px;
-        margin-top: 8px;
-        border-radius: 6px;
-        border: 1px solid #ccc;
-    }
-    
-    .box button {
-        background: #27ae60;
-        color: white;
-        cursor: pointer;
-    }
-    /* diet button */
-    
-    .diet_btn {
-        display: inline-block;
-        background: #4CAF50;
-        color: white;
-        padding: 10px 16px;
-        border-radius: 8px;
-        font-size: 14px;
-        font-weight: 600;
-        text-decoration: none;
-        margin-top: 8px;
-        transition: 0.3s;
-    }
-    
-    .diet-btn:hover {
-        background: #3b8d42;
-        transform: translateY(-3px);
-    }
-    /* =========================
+            
+            .container {
+                max-width: 700px;
+                margin: auto;
+                padding: 20px;
+            }
+            
+            .tabs {
+                display: flex;
+                justify-content: center;
+                gap: 10px;
+                margin-bottom: 25px;
+            }
+            
+            .tab-btn {
+                padding: 10px 20px;
+                border: none;
+                background: #ddd;
+                cursor: pointer;
+                border-radius: 6px;
+                font-size: 15px;
+            }
+            
+            .tab-btn.active {
+                background: #27ae60;
+                color: #fff;
+            }
+            
+            .box {
+                display: none;
+                background: white;
+                padding: 25px;
+                border-radius: 10px;
+                box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+            }
+            
+            .box.active {
+                display: block;
+            }
+            
+            .box input,
+            .box select,
+            .box button {
+                width: 100%;
+                padding: 10px;
+                margin-top: 8px;
+                border-radius: 6px;
+                border: 1px solid #ccc;
+            }
+            
+            .box button {
+                background: #27ae60;
+                color: white;
+                cursor: pointer;
+            }
+            /* diet button */
+            
+            .diet_btn {
+                display: inline-block;
+                background: #4CAF50;
+                color: white;
+                padding: 10px 16px;
+                border-radius: 8px;
+                font-size: 14px;
+                font-weight: 600;
+                text-decoration: none;
+                margin-top: 8px;
+                transition: 0.3s;
+            }
+            
+            .diet-btn:hover {
+                background: #3b8d42;
+                transform: translateY(-3px);
+            }
+            /* =========================
     Responsive
 ========================= */
-    
-    @media (max-width: 768px) {
-        nav ul {
-            flex-wrap: wrap;
-            gap: 12px;
-        }
-        .hero {
-            flex-direction: column-reverse;
-            text-align: center;
-        }
-        .hero img {
-            width: 100%;
-        }
-        .hero div {
-            max-width: 100%;
-        }
-    }
-    
-    .cta-calculator {
-        background: linear-gradient(to right, #4CAF50, #3bb77e);
-        text-align: center;
-        padding: 50px 20px;
-        color: white;
-        border-radius: 20px;
-        width: 90%;
-        margin: 60px auto;
-        box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
-    }
-    
-    .cta-calculator h2 {
-        font-size: 28px;
-        font-weight: 700;
-        margin-bottom: 15px;
-    }
-    
-    .cta-calculator p {
-        font-size: 17px;
-        margin-bottom: 20px;
-    }
-    
-    .cta-button {
-        background: #fff;
-        color: #2e8e46;
-        padding: 14px 30px;
-        font-size: 18px;
-        font-weight: 600;
-        border-radius: 50px;
-        text-decoration: none;
-        transition: 0.3s ease;
-        display: inline-block;
-    }
-    
-    .cta-button:hover {
-        background: #2e8e46;
-        color: #fff;
-        transform: scale(1.05);
-    }
-    
-    .mini-note {
-        font-size: 14px;
-        margin-top: 12px;
-        opacity: 0.9;
-    }
-    
-    .why-section {
-        padding: 80px 100px;
-        text-align: center;
-        background: #f3ffec;
-    }
-    
-    .why-section h2 {
-        font-size: 34px;
-        font-weight: 700;
-        margin-bottom: 50px;
-        color: #1c1c1c;
-    }
-    
-    .why-container {
-        display: flex;
-        gap: 30px;
-        justify-content: center;
-        flex-wrap: wrap;
-    }
-    
-    .why-card {
-        background: #fff;
-        padding: 35px 25px;
-        border-radius: 18px;
-        width: 300px;
-        text-align: center;
-        box-shadow: 0 8px 25px rgba(0, 0, 0, 0.08);
-        transition: 0.35s ease;
-        border: 1px solid #e3f8e5;
-    }
-    
-    .why-card:hover {
-        transform: translateY(-8px) scale(1.03);
-        box-shadow: 0 12px 32px rgba(0, 0, 0, 0.15);
-    }
-    
-    .why-icon {
-        font-size: 42px;
-        margin-bottom: 12px;
-    }
-    
-    .why-card h3 {
-        font-size: 18px;
-        font-weight: 600;
-        margin-bottom: 8px;
-    }
-    
-    .why-card p {
-        font-size: 14px;
-        color: #444;
-        line-height: 1.5;
-    }
-    
-    #success {
-        padding: 80px 40px;
-        background: #f9fff5;
-    }
-    
-    .success-subtitle {
-        text-align: center;
-        margin-top: -10px;
-        margin-bottom: 35px;
-        font-size: 18px;
-        color: #040000;
-        font-size: 35px;
-        font-weight: 600;
-    }
-    
-    .success-grid {
-        gap: 30px;
-    }
-    
-    .success-card {
-        background: #fff;
-        padding: 20px;
-        border-radius: 14px;
-        box-shadow: 0 6px 18px rgba(0, 0, 0, 0.1);
-        text-align: center;
-        transition: 0.3s;
-    }
-    
-    .success-card:hover {
-        transform: translateY(-6px);
-        box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
-    }
-    
-    .success-card img {
-        width: 100%;
-        height: 230px;
-        object-fit: cover;
-        border-radius: 12px;
-        margin-bottom: 12px;
-    }
-    
-    .success-card h3 {
-        font-size: 20px;
-        font-weight: 700;
-        margin-bottom: 8px;
-    }
-    
-    .story {
-        font-size: 15px;
-        line-height: 1.6;
-        color: #444;
-        margin-bottom: 10px;
-    }
-    
-    .client-name {
-        font-size: 14px;
-        font-weight: 600;
-        color: #2ecc71;
-    }
-    
-    .view-more-btn {
-        display: inline-block;
-        background: #4CAF50;
-        color: white;
-        padding: 10px 16px;
-        border-radius: 8px;
-        font-size: 14px;
-        font-weight: 600;
-        text-decoration: none;
-        margin-top: 8px;
-        transition: 0.3s;
-    }
-    
-    .view-more-btn:hover {
-        background: #3b8d42;
-        transform: translateY(-3px);
-    }
-    /* =========================
+            
+            @media (max-width: 768px) {
+                nav ul {
+                    flex-wrap: wrap;
+                    gap: 12px;
+                }
+                .hero {
+                    flex-direction: column-reverse;
+                    text-align: center;
+                }
+                .hero img {
+                    width: 100%;
+                }
+                .hero div {
+                    max-width: 100%;
+                }
+            }
+            
+            .cta-calculator {
+                background: linear-gradient(to right, #4CAF50, #3bb77e);
+                text-align: center;
+                padding: 50px 20px;
+                color: white;
+                border-radius: 20px;
+                width: 90%;
+                margin: 60px auto;
+                box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+            }
+            
+            .cta-calculator h2 {
+                font-size: 28px;
+                font-weight: 700;
+                margin-bottom: 15px;
+            }
+            
+            .cta-calculator p {
+                font-size: 17px;
+                margin-bottom: 20px;
+            }
+            
+            .cta-button {
+                background: #fff;
+                color: #2e8e46;
+                padding: 14px 30px;
+                font-size: 18px;
+                font-weight: 600;
+                border-radius: 50px;
+                text-decoration: none;
+                transition: 0.3s ease;
+                display: inline-block;
+            }
+            
+            .cta-button:hover {
+                background: #2e8e46;
+                color: #fff;
+                transform: scale(1.05);
+            }
+            
+            .mini-note {
+                font-size: 14px;
+                margin-top: 12px;
+                opacity: 0.9;
+            }
+            
+            .why-section {
+                padding: 80px 100px;
+                text-align: center;
+                background: #f3ffec;
+            }
+            
+            .why-section h2 {
+                font-size: 34px;
+                font-weight: 700;
+                margin-bottom: 50px;
+                color: #1c1c1c;
+            }
+            
+            .why-container {
+                display: flex;
+                gap: 30px;
+                justify-content: center;
+                flex-wrap: wrap;
+            }
+            
+            .why-card {
+                background: #fff;
+                padding: 35px 25px;
+                border-radius: 18px;
+                width: 300px;
+                text-align: center;
+                box-shadow: 0 8px 25px rgba(0, 0, 0, 0.08);
+                transition: 0.35s ease;
+                border: 1px solid #e3f8e5;
+            }
+            
+            .why-card:hover {
+                transform: translateY(-8px) scale(1.03);
+                box-shadow: 0 12px 32px rgba(0, 0, 0, 0.15);
+            }
+            
+            .why-icon {
+                font-size: 42px;
+                margin-bottom: 12px;
+            }
+            
+            .why-card h3 {
+                font-size: 18px;
+                font-weight: 600;
+                margin-bottom: 8px;
+            }
+            
+            .why-card p {
+                font-size: 14px;
+                color: #444;
+                line-height: 1.5;
+            }
+            
+            #success {
+                padding: 80px 40px;
+                background: #f9fff5;
+            }
+            
+            .success-subtitle {
+                text-align: center;
+                margin-top: -10px;
+                margin-bottom: 35px;
+                font-size: 18px;
+                color: #040000;
+                font-size: 35px;
+                font-weight: 600;
+            }
+            
+            .success-grid {
+                gap: 30px;
+            }
+            
+            .success-card {
+                background: #fff;
+                padding: 20px;
+                border-radius: 14px;
+                box-shadow: 0 6px 18px rgba(0, 0, 0, 0.1);
+                text-align: center;
+                transition: 0.3s;
+            }
+            
+            .success-card:hover {
+                transform: translateY(-6px);
+                box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+            }
+            
+            .success-card img {
+                width: 100%;
+                height: 230px;
+                object-fit: cover;
+                border-radius: 12px;
+                margin-bottom: 12px;
+            }
+            
+            .success-card h3 {
+                font-size: 20px;
+                font-weight: 700;
+                margin-bottom: 8px;
+            }
+            
+            .story {
+                font-size: 15px;
+                line-height: 1.6;
+                color: #444;
+                margin-bottom: 10px;
+            }
+            
+            .client-name {
+                font-size: 14px;
+                font-weight: 600;
+                color: #2ecc71;
+            }
+            
+            .view-more-btn {
+                display: inline-block;
+                background: #4CAF50;
+                color: white;
+                padding: 10px 16px;
+                border-radius: 8px;
+                font-size: 14px;
+                font-weight: 600;
+                text-decoration: none;
+                margin-top: 8px;
+                transition: 0.3s;
+            }
+            
+            .view-more-btn:hover {
+                background: #3b8d42;
+                transform: translateY(-3px);
+            }
+            /* =========================
     Footer
 ========================= */
-    
-    footer {
-        text-align: center;
-        padding: 20px;
-        background: #2ecc71;
-        color: white;
-    }
-    /* ---------------------------------------
+            
+            footer {
+                text-align: center;
+                padding: 20px;
+                background: #2ecc71;
+                color: white;
+            }
+            /* ---------------------------------------
    MOBILE RESPONSIVE (DON’T EDIT ABOVE CODE)
 ---------------------------------------- */
-    
-    @media (max-width: 992px) {
-        nav {
-            padding: 14px 20px;
-        }
-        .hero {
-            padding: 120px 20px;
-        }
-    }
-    /* ----------- Mobile (768px) ----------- */
-    
-    @media (max-width: 768px) {
-        /* NAVBAR */
-        nav {
-            padding: 12px 20px;
-        }
-        nav ul {
-            position: absolute;
-            top: 70px;
-            right: 0;
-            background: white;
-            width: 100%;
-            flex-direction: column;
-            text-align: center;
-            padding: 20px 0;
-            display: none;
-        }
-        nav ul.active {
-            display: block;
-        }
-        /* HAMBURGER ICON */
-        .menu-icon {
-            display: block;
-            font-size: 30px;
-            cursor: pointer;
-        }
-        nav ul li {
-            margin: 12px 0;
-        }
-        /* HERO SECTION */
-        .hero {
-            flex-direction: column-reverse;
-            text-align: center;
-            padding: 140px 20px;
-        }
-        .hero img {
-            width: 100%;
-            margin-bottom: 20px;
-        }
-        .hero-content {
-            max-width: 100%;
-        }
-        .hero h2 {
-            font-size: 34px;
-        }
-        .hero p {
-            font-size: 16px;
-        }
-        /* CARDS */
-        .card-container {
-            grid-template-columns: 1fr;
-        }
-        /* WHY SECTION */
-        .why-section {
-            padding: 50px 20px;
-        }
-        .why-container {
-            flex-direction: column;
-        }
-        .why-card {
-            width: 100%;
-        }
-        /* SUCCESS STORIES */
-        #success {
-            padding: 40px 20px;
-        }
-        .success-subtitle {
-            font-size: 24px;
-        }
-        .success-card img {
-            height: 180px;
-        }
-        /* CALCULATOR */
-        .container {
-            width: 100%;
-            padding: 10px;
-        }
-        .cta-calculator {
-            width: 100%;
-            margin: 30px 0;
-        }
-    }
-    /* ----------- Extra Small (480px) ----------- */
-    
-    @media (max-width: 480px) {
-        nav .logo {
-            font-size: 18px;
-        }
-        .cta {
-            font-size: 16px;
-            padding: 10px 22px;
-        }
-        .hero h2 {
-            font-size: 28px;
-        }
-        .hero p {
-            font-size: 14px;
-        }
-        .why-card {
-            padding: 25px;
-        }
-        .view-more-btn,
-        .diet_btn {
-            font-size: 13px;
-            padding: 8px 14px;
-        }
-    }
+            
+            @media (max-width: 992px) {
+                nav {
+                    padding: 14px 20px;
+                }
+                .hero {
+                    padding: 120px 20px;
+                }
+            }
+            /* ----------- Mobile (768px) ----------- */
+            
+            @media (max-width: 768px) {
+                /* NAVBAR */
+                nav {
+                    padding: 12px 20px;
+                }
+                nav ul {
+                    position: absolute;
+                    top: 70px;
+                    right: 0;
+                    background: white;
+                    width: 100%;
+                    flex-direction: column;
+                    text-align: center;
+                    padding: 20px 0;
+                    display: none;
+                }
+                nav ul.active {
+                    display: block;
+                }
+                /* HAMBURGER ICON */
+                .menu-icon {
+                    display: block;
+                    font-size: 30px;
+                    cursor: pointer;
+                }
+                nav ul li {
+                    margin: 12px 0;
+                }
+                /* HERO SECTION */
+                .hero {
+                    flex-direction: column-reverse;
+                    text-align: center;
+                    padding: 140px 20px;
+                }
+                .hero img {
+                    width: 100%;
+                    margin-bottom: 20px;
+                }
+                .hero-content {
+                    max-width: 100%;
+                }
+                .hero h2 {
+                    font-size: 34px;
+                }
+                .hero p {
+                    font-size: 16px;
+                }
+                /* CARDS */
+                .card-container {
+                    grid-template-columns: 1fr;
+                }
+                /* WHY SECTION */
+                .why-section {
+                    padding: 50px 20px;
+                }
+                .why-container {
+                    flex-direction: column;
+                }
+                .why-card {
+                    width: 100%;
+                }
+                /* SUCCESS STORIES */
+                #success {
+                    padding: 40px 20px;
+                }
+                .success-subtitle {
+                    font-size: 24px;
+                }
+                .success-card img {
+                    height: 180px;
+                }
+                /* CALCULATOR */
+                .container {
+                    width: 100%;
+                    padding: 10px;
+                }
+                .cta-calculator {
+                    width: 100%;
+                    margin: 30px 0;
+                }
+            }
+            /* ----------- Extra Small (480px) ----------- */
+            
+            @media (max-width: 480px) {
+                nav .logo {
+                    font-size: 18px;
+                }
+                .cta {
+                    font-size: 16px;
+                    padding: 10px 22px;
+                }
+                .hero h2 {
+                    font-size: 28px;
+                }
+                .hero p {
+                    font-size: 14px;
+                }
+                .why-card {
+                    padding: 25px;
+                }
+                .view-more-btn,
+                .diet_btn {
+                    font-size: 13px;
+                    padding: 8px 14px;
+                }
+            }
+            /* ---------------------------------------
+   NAVBAR FIX — DESKTOP & MOBILE BOTH
+            /* HIDE hamburger on DESKTOP */
+            
+            .menu-icon {
+                display: none;
+            }
+            /* Desktop menu (default) */
+            
+            nav ul {
+                display: flex;
+                gap: 20px;
+            }
+            /* ----------- Mobile (768px) ----------- */
+            
+            @media (max-width: 768px) {
+                /* Show hamburger on mobile */
+                .menu-icon {
+                    display: block;
+                    font-size: 32px;
+                    cursor: pointer;
+                }
+                /* Hide menu by default on mobile */
+                nav ul {
+                    display: none;
+                    position: absolute;
+                    top: 70px;
+                    right: 0;
+                    width: 100%;
+                    background: #fff;
+                    flex-direction: column;
+                    text-align: center;
+                    padding: 20px 0;
+                    gap: 15px;
+                    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+                }
+                /* Show after clicking hamburger */
+                nav ul.active {
+                    display: flex;
+                }
+            }

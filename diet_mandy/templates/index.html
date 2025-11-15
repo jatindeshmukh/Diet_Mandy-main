@@ -16,8 +16,8 @@
 <!--  Navbar -->
 <nav>
     <div class="logo">🥗 Diet Mandi</div>
-    <div class="menu-icon" onclick="toggleMenu()">☰</div>
-    <ul>
+        <div class="menu-icon" onclick="toggleMenu()">☰</div>
+        <ul id="menuList">
         <li><a href="#home" class="active">Home</a></li>
         <li><a href="#why-different">Why We're Different</a></li>
         <li><a href="#diets">Health Analysis</a></li>
@@ -214,7 +214,7 @@
 
 <script>
 function toggleMenu() {
-    document.querySelector("nav ul").classList.toggle("active");
+    document.getElementById("menuList").classList.toggle("active");
 }
 </script>
 
