@@ -16,13 +16,13 @@
 <!--  Navbar -->
 <nav>
     <div class="logo">🥗 Diet Mandi</div>
+    <div class="menu-icon" onclick="toggleMenu()">☰</div>
     <ul>
         <li><a href="#home" class="active">Home</a></li>
         <li><a href="#why-different">Why We're Different</a></li>
         <li><a href="#diets">Health Analysis</a></li>
         <li><a href="{% url 'blogs' %}">Blog </a></li>
         <li><a href="{% url 'inquiry' %}">Inquiry</a></li>
-        
         <!--  Your Django Login / Signup -->
         {% if user.is_authenticated %}
             <li><a href="{% url 'logout' %}">Logout</a></li>
@@ -211,6 +211,13 @@
 
     <p class="mini-note">Takes less than 2 minutes ⏳ — No guesswork, just science!</p>
 </section>
+
+<script>
+function toggleMenu() {
+    document.querySelector("nav ul").classList.toggle("active");
+}
+</script>
+
 
 <!--  Footer -->
 <footer>

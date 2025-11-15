@@ -482,3 +482,123 @@
         background: #2ecc71;
         color: white;
     }
+    /* ---------------------------------------
+   MOBILE RESPONSIVE (DON’T EDIT ABOVE CODE)
+---------------------------------------- */
+    
+    @media (max-width: 992px) {
+        nav {
+            padding: 14px 20px;
+        }
+        .hero {
+            padding: 120px 20px;
+        }
+    }
+    /* ----------- Mobile (768px) ----------- */
+    
+    @media (max-width: 768px) {
+        /* NAVBAR */
+        nav {
+            padding: 12px 20px;
+        }
+        nav ul {
+            position: absolute;
+            top: 70px;
+            right: 0;
+            background: white;
+            width: 100%;
+            flex-direction: column;
+            text-align: center;
+            padding: 20px 0;
+            display: none;
+        }
+        nav ul.active {
+            display: block;
+        }
+        /* HAMBURGER ICON */
+        .menu-icon {
+            display: block;
+            font-size: 30px;
+            cursor: pointer;
+        }
+        nav ul li {
+            margin: 12px 0;
+        }
+        /* HERO SECTION */
+        .hero {
+            flex-direction: column-reverse;
+            text-align: center;
+            padding: 140px 20px;
+        }
+        .hero img {
+            width: 100%;
+            margin-bottom: 20px;
+        }
+        .hero-content {
+            max-width: 100%;
+        }
+        .hero h2 {
+            font-size: 34px;
+        }
+        .hero p {
+            font-size: 16px;
+        }
+        /* CARDS */
+        .card-container {
+            grid-template-columns: 1fr;
+        }
+        /* WHY SECTION */
+        .why-section {
+            padding: 50px 20px;
+        }
+        .why-container {
+            flex-direction: column;
+        }
+        .why-card {
+            width: 100%;
+        }
+        /* SUCCESS STORIES */
+        #success {
+            padding: 40px 20px;
+        }
+        .success-subtitle {
+            font-size: 24px;
+        }
+        .success-card img {
+            height: 180px;
+        }
+        /* CALCULATOR */
+        .container {
+            width: 100%;
+            padding: 10px;
+        }
+        .cta-calculator {
+            width: 100%;
+            margin: 30px 0;
+        }
+    }
+    /* ----------- Extra Small (480px) ----------- */
+    
+    @media (max-width: 480px) {
+        nav .logo {
+            font-size: 18px;
+        }
+        .cta {
+            font-size: 16px;
+            padding: 10px 22px;
+        }
+        .hero h2 {
+            font-size: 28px;
+        }
+        .hero p {
+            font-size: 14px;
+        }
+        .why-card {
+            padding: 25px;
+        }
+        .view-more-btn,
+        .diet_btn {
+            font-size: 13px;
+            padding: 8px 14px;
+        }
+    }
